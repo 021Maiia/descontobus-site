@@ -1,0 +1,10 @@
+# Site gerado pelo Descontobus OS. Não edite aqui: as mudanças são feitas pelo sistema.
+ErrorDocument 404 /404.html
+Options -Indexes
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(webp|png|jpe?g|gif|css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
