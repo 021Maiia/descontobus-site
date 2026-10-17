@@ -120,3 +120,9 @@ form.sc .go{height:50px;padding:0 26px;font-size:17px;border-radius:12px;white-s
 .partners .pl .btn{padding:12px 18px;margin-top:0;align-self:auto}
 .links .ph{color:var(--line);font-size:14px;margin:10px 0 0;text-align:center}
 .links .disc{color:var(--line);font-size:12px;text-align:center;margin:0}
+.ft .ft-logo{height:70px;width:auto;max-width:200px;align-self:flex-start;object-fit:contain}
+.social{gap:10px}
+.social .soc{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#fff;text-decoration:none}
+.social .soc:hover{background:var(--cyan);border-color:var(--cyan);color:var(--navy)}
+.pays{display:flex;flex-wrap:wrap;gap:6px}
+.pays .pay{display:block;border-radius:6px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
