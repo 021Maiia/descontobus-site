@@ -1,6 +1,12 @@
 # Site gerado pelo Descontobus OS. Não edite aqui: as mudanças são feitas pelo sistema.
 ErrorDocument 404 /404.html
 Options -Indexes
+# v1.31.2: www vai para https://descontobus.com.br, para o Google não ver o site em dobro
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^www\.descontobus\.com\.br$ [NC]
+  RewriteRule ^ https://descontobus.com.br%{REQUEST_URI} [R=301,L]
+</IfModule>
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
