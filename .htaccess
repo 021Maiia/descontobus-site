@@ -13,4 +13,8 @@ Options -Indexes
   <FilesMatch "\.(webp|png|jpe?g|gif|css|js)$">
     Header set Cache-Control "public, max-age=604800"
   </FilesMatch>
+  # v1.34.2: páginas sempre conferidas com o servidor (sem isso o navegador guardava a página velha por horas)
+  <FilesMatch "\.(html|xml|txt)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
 </IfModule>
