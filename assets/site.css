@@ -113,3 +113,10 @@ form.sc .go{height:50px;padding:0 26px;font-size:17px;border-radius:12px;white-s
 @media (max-width:640px){section{padding:44px 0}.hero{padding:44px 0 56px}.hd .logo img{width:auto;height:46px}.hd nav{order:3;flex-basis:100%;font-size:15px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch}.hd nav a{white-space:nowrap}.hd nav{scrollbar-width:none}.hd nav::-webkit-scrollbar{display:none}.hd .btn{margin-left:auto;padding:10px 16px;font-size:15px}.hero:after{background:linear-gradient(180deg,rgba(1,6,43,.62),rgba(1,6,43,.9))}.steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.step{padding:14px}.cards .card img{height:140px}.btn{padding:13px 18px}.hero .row .btn{flex:1 1 100%}.rcard{height:150px}.qf-wrap>.txt h2{font-size:2.3rem!important}form.qf{padding:18px}}
 @media (max-width:420px){form.sb{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rcard img{transition:none}}
+
+.partners{margin-top:32px;padding:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.partners h2{font-size:20px;margin:0}
+.partners .pl{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.partners .pl .btn{padding:12px 18px;margin-top:0;align-self:auto}
+.links .ph{color:var(--line);font-size:14px;margin:10px 0 0;text-align:center}
+.links .disc{color:var(--line);font-size:12px;text-align:center;margin:0}
