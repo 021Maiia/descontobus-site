@@ -5,6 +5,16 @@
   function br(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s);return m?m[3]+'/'+m[2]+'/'+m[1]:s}
   function toWa(f){if(wa)location.href='https://wa.me/55'+wa+'?text='+encodeURIComponent(waText(f))}
   function show(f,cls,txt){var m=f.querySelector('.msg');if(m){m.className='msg '+cls;m.textContent=txt}}
+  // v1.34: a busca do topo leva origem, destino, data e passageiros para o pedido de cotação
+  Array.prototype.forEach.call(document.querySelectorAll('form.sb'),function(s){
+    s.addEventListener('submit',function(ev){
+      var q=document.querySelector('#cotar form.qf');if(!q)return;
+      ev.preventDefault();if(!s.reportValidity())return;
+      ['origin','destination','depart_date','pax'].forEach(function(n){var a=s.elements[n],b=q.elements[n];if(a&&b&&a.value)b.value=a.value});
+      document.getElementById('cotar').scrollIntoView({behavior:'smooth'});
+      var nm=q.elements.name;if(nm)setTimeout(function(){nm.focus({preventScroll:true})},400);
+    });
+  });
   Array.prototype.forEach.call(document.querySelectorAll('form.qf'),function(f){
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
