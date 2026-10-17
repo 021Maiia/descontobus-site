@@ -126,3 +126,66 @@ form.sc .go{height:50px;padding:0 26px;font-size:17px;border-radius:12px;white-s
 .social .soc:hover{background:var(--cyan);border-color:var(--cyan);color:var(--navy)}
 .pays{display:flex;flex-wrap:wrap;gap:6px}
 .pays .pay{display:block;border-radius:6px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+/* v1.40 (D-116) · escala no padrão dos grandes sites de passagem: o mesmo desenho, com fontes e espaços menores */
+body{font-size:16px;line-height:1.5}
+section{padding:52px 0}
+main p{font-size:1rem}
+.hero.hx h1{font-size:clamp(2rem,4.4vw,3.3rem)}
+.hero.hx p{font-size:1.05rem}
+.sh h2{font-size:clamp(1.45rem,2.6vw,2rem)}
+.sh h2 .i{width:24px;height:24px}
+h2.t{font-size:clamp(1.6rem,3vw,2.2rem)}
+.qf-wrap>.txt h2{font-size:clamp(1.6rem,3vw,2.2rem)!important}
+.qf{flex:0 1 540px;padding:20px;gap:12px}
+.qf>label{flex:none}
+.qf label{font-size:14px;gap:4px}
+.qf input,.qf select{padding:10px 12px}
+.qf b.t{font-size:1.35rem!important}
+.qf .btn{height:46px}
+.sc-head b{font-size:1.35rem}
+.why article{padding:18px;gap:8px}
+.why h3{font-size:1rem}
+.why p,.trust{font-size:14px}
+.card h3{font-size:1.3rem}
+.card .in{padding:14px 16px 16px}
+.prod img,.prod .noimg{height:150px}
+.ofr{height:260px}
+.ofr-t{font-size:1.15rem}
+.bnr{min-height:190px;padding:22px 24px}
+.bnr h3{font-size:clamp(1.4rem,2.4vw,1.9rem)}
+.bnr .bt{position:relative;z-index:1;max-width:62%}
+.bnr .corp-art{position:absolute;right:8px;bottom:0;height:88%;width:auto;max-width:42%}
+.faq summary{padding:13px 0}
+.desc-box img{max-width:220px}
+@media (max-width:900px){section{padding:40px 0}.bnr .bt{max-width:64%}}
+@media (max-width:640px){
+body{font-size:15px}
+section{padding:30px 0}
+.hero.hx h1{font-size:2rem}
+.hero.hx p{font-size:.98rem}
+.sh h2{font-size:1.35rem}
+.sh p{font-size:14px}
+.qf{padding:16px;gap:10px}
+.qf .g{gap:10px}
+.qf .g>label{flex:1 1 130px;min-width:0}
+.qf input[type=date]{min-width:0;padding:10px 8px}
+.qf-wrap{gap:20px}
+.qf-wrap>.txt h2{font-size:1.5rem!important}
+.cards:has(>.prod){grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.prod img,.prod .noimg{height:110px}
+.prod .in{padding:10px}
+.prod h3{font-size:1.02rem}
+.why{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.why article{padding:14px;gap:6px}
+.why h3{font-size:.95rem}
+.why p{font-size:13px}
+.ofr{height:220px}
+.bnr{min-height:0;padding:20px}
+.bnr h3{font-size:1.45rem}
+.bnr .art{height:84%}
+.bnr .bt{max-width:60%}
+.bnr .corp-art{height:auto;width:38%;max-width:150px;bottom:14px;right:10px}
+.desc-box img{max-width:140px}
+.faq summary{padding:12px 0;font-size:15px}
+.ft .col{gap:6px}
+}
