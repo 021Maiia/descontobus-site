@@ -25,6 +25,15 @@
       location.href='https://wa.me/55'+bot+'?text='+encodeURIComponent(t);
     });
   });
+  // v1.46 (D-123): página de trechos · busca pelo nome da cidade e "Comprar" abre o WhatsApp com o trecho
+  var trq=document.querySelector?document.querySelector('.trq'):null;
+  if(trq){var nk=function(x){return String(x||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim()};
+    trq.addEventListener('input',function(){var q=nk(trq.value),any=false;
+      Array.prototype.forEach.call(document.querySelectorAll('.trh'),function(h){var hv=false;
+        Array.prototype.forEach.call(h.querySelectorAll('.tru'),function(g){var n=0;Array.prototype.forEach.call(g.querySelectorAll('li'),function(li){var ok=!q||li.getAttribute('data-q').indexOf(q)>=0||nk(g.getAttribute('data-uf')).indexOf(q)>=0;li.hidden=!ok;if(ok)n++});g.hidden=!n;g.open=!!(q&&n);if(n)hv=true});
+        h.hidden=!hv;if(hv)any=true});
+      var no=document.querySelector('.trno');if(no)no.className='trno'+(any?'':' on')})}
+  Array.prototype.forEach.call(document.querySelectorAll('a[data-tr-o]'),function(a){a.addEventListener('click',function(ev){if(!bot)return;ev.preventDefault();ping('buy');var t='Olá, Descontão! Quero comprar passagem de '+a.getAttribute('data-tr-o')+' para '+a.getAttribute('data-tr-d')+'.';if(via)t+='\n'+via;location.href='https://wa.me/55'+bot+'?text='+encodeURIComponent(t)})});
   Array.prototype.forEach.call(document.querySelectorAll('form.qf'),function(f){
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
