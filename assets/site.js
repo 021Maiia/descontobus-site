@@ -10,6 +10,8 @@
   function net(u){var h='';try{h=new URL(u,location.href).hostname.toLowerCase()}catch(e){return 'outro'}if(/(^|\.)stay22\.com$/.test(h))return 'stay22';if(/(^|\.)(anrdoezrs\.net|jdoqocy\.com|tkqlhce\.com|dpbolvw\.net|kqzyfj\.com|emjcd\.com|apmebf\.com|ftjcfx\.com|lduhtrp\.net|qksrv\.net|tqlkg\.com|afcyhf\.com)$/.test(h))return 'cj';if(/lomadee|(^|\.)lmd\./.test(h))return 'lomadee';if(/(^|\.)(tp\.media|tpo\.\w+)$|travelpayouts/.test(h))return 'travelpayouts';if(/(^|\.)(meli\.la|mercadolivre\.com\.br|mercadolibre\.com)$/.test(h))return 'mercadolivre';if(/(^|\.)(shopee\.com\.br|shope\.ee|s\.shopee\.com\.br)$/.test(h))return 'shopee';if(/(^|\.)(amazon\.com\.br|amazon\.com|amzn\.to)$/.test(h))return 'amazon';return 'outro'}
   function ping(t,a){try{if(!api||!navigator.sendBeacon)return;var r='';try{var h=document.referrer?new URL(document.referrer).hostname:'';if(h&&h!==location.hostname)r=h}catch(e){}var v='';try{v=new URLSearchParams(location.search).get('via')||''}catch(e){}navigator.sendBeacon(api+'/api/visita',new Blob([JSON.stringify({t:t,p:location.pathname,r:r,d:matchMedia('(max-width:768px)').matches?'m':'d',v:v,a:a||''})],{type:'text/plain'}))}catch(e){}}
   ping('pv');
+  // v1.50: o menu de serviços fecha ao clicar fora ou num link (antes do contador de cliques)
+  if(document.querySelectorAll&&document.addEventListener)document.addEventListener('click',function(e){Array.prototype.forEach.call(document.querySelectorAll('details.dd[open]'),function(d){if(!d.contains(e.target)||(e.target.closest&&e.target.closest('.ddm a')))d.removeAttribute('open')})});
   if(document.addEventListener)document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;var u=a.getAttribute('href')||'';if(u.indexOf('https://wa.me/')===0)ping('wa');else if(/sponsored/.test(a.getAttribute('rel')||''))ping('aff',net(u));else if(a.closest('.prod'))ping('shop',net(u))},true);
   // v1.36: trocar origem e destino; atalhos Hoje e Amanhã
   Array.prototype.forEach.call(document.querySelectorAll('form.sc'),function(s){
@@ -36,6 +38,8 @@
         h.hidden=!hv;if(hv)any=true});
       var no=document.querySelector('.trno');if(no)no.className='trno'+(any?'':' on')})}
   Array.prototype.forEach.call(document.querySelectorAll('a[data-tr-o]'),function(a){a.addEventListener('click',function(ev){if(!bot)return;ev.preventDefault();ping('buy');var t='Olá, Descontão! Quero comprar passagem de '+a.getAttribute('data-tr-o')+' para '+a.getAttribute('data-tr-d')+'.';if(via)t+='\n'+via;location.href='https://wa.me/55'+bot+'?text='+encodeURIComponent(t)})});
+  // v1.50 (D-130): cartões entram suavemente ao aparecer na tela; o menu de serviços fecha ao clicar fora ou num link
+  if(document.querySelectorAll&&typeof IntersectionObserver!=='undefined'&&!(typeof matchMedia!=='undefined'&&matchMedia('(prefers-reduced-motion: reduce)').matches)){var rvs=document.querySelectorAll('.rv');if(rvs.length){document.body.className+=' js-rv';var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.className+=' on';io.unobserve(x.target)}})},{rootMargin:'0px 0px -40px 0px'});Array.prototype.forEach.call(rvs,function(el){io.observe(el)})}}
   Array.prototype.forEach.call(document.querySelectorAll('form.qf'),function(f){
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
