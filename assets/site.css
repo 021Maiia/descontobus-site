@@ -234,5 +234,12 @@ section{padding:30px 0}
 .ptn.big{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.ptn.big span{min-height:96px}
 .ptn span{transition:transform .2s,box-shadow .2s,border-color .2s}.ptn span:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(1,6,43,.10);border-color:var(--cyan)}
 .js-rv .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.js-rv .rv.on{opacity:1;transform:none}
+/* v1.51: páginas próprias do menu */
+.pghero{padding:clamp(56px,8vw,96px) 0}.pghero p{font-size:1.1rem}
+.jump{margin:20px 0 0}.jump a{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.35)}.jump a:hover,.jump a:focus-visible{background:#fff;color:var(--navy);border-color:#fff}
+.stepper.sm{grid-template-columns:repeat(3,minmax(0,1fr))}.stepper.sm:before{left:16%;right:16%}
+.contact .relcta{min-height:100%}
+section[id]{scroll-margin-top:90px}
+@media (max-width:700px){.stepper.sm{grid-template-columns:1fr}.relcta{flex-wrap:wrap}}
 @media (prefers-reduced-motion:reduce){.js-rv .rv{opacity:1;transform:none;transition:none}.why article,.why .wimg img,.ptn span,.gcard,.relcta,.ddm{transition:none;animation:none}}
 @media screen and (max-width:640px){.ddm{grid-template-columns:1fr;max-height:70vh;overflow:auto;border-radius:0 0 14px 14px}.relcta{flex-wrap:wrap}}
