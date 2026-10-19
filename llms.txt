@@ -44,7 +44,7 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - A Descontobus é uma agência de verdade? Sim. Somos uma agência de viagens com CNPJ e cadastro no Cadastur, do Ministério do Turismo. Os dados da empresa ficam no rodapé de todas as páginas.
 - Quem faz a viagem? A empresa de ônibus ou a companhia aérea que aparece no bilhete. A gente pesquisa, emite e acompanha você até o embarque.
 - Quanto é a taxa de serviço? Depende da viagem. Ela aparece separada da tarifa, por escrito, antes de você pagar. Você só paga se concordar.
-- Como eu pago? Pelo link da cotação ou por Pix, sempre na conta da empresa. A gente nunca pede pagamento em conta de pessoa física.
+- Como eu pago? Na busca do site, você paga no ambiente da Buson, nossa parceira. Na cotação, paga pelo link ou por Pix, sempre na conta da empresa. A gente nunca pede pagamento em conta de pessoa física.
 - Por que aparece outro nome no Pix? No Pix, aparece o nome ALEXANDRE DE OLIVEIRA MAIA GOMES, que é a razão social da Descontobus (CNPJ 63.144.303/0001-06). É a conta da empresa.
 - Como recebo a passagem? O cartão de embarque chega no mesmo link da cotação. Na hora de embarcar, mostre no celular junto com um documento com foto.
 - Como sei que a passagem é válida? O bilhete é emitido no sistema da própria empresa de transporte e tem o localizador dela. Se quiser, você confere direto com a empresa.
