@@ -27,11 +27,11 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - [Blog](https://descontobus.com.br/blog/): Destinos e dicas de viagem.
 
 ## Rotas
-- [Rio de Janeiro para São Paulo de ônibus](https://descontobus.com.br/rio-sao-paulo/): a partir de R$ 90,00 + taxa de serviço
-- [São Paulo para Rio de Janeiro de ônibus](https://descontobus.com.br/sao-paulo-rio/): a partir de R$ 85,00 + taxa de serviço
-- [Rio de Janeiro para Búzios de ônibus](https://descontobus.com.br/rio-buzios/): a partir de R$ 92,00 + taxa de serviço
-- [Búzios para Rio de Janeiro de ônibus](https://descontobus.com.br/buzios-rio/): a partir de R$ 83,00 + taxa de serviço
-- [Rio de Janeiro para Bom Jesus do Norte de ônibus](https://descontobus.com.br/rio-bom-jesus-do-norte/): a partir de R$ 141,00 + taxa de serviço
+- [Rio de Janeiro para São Paulo de ônibus](https://descontobus.com.br/rio-sao-paulo/)
+- [São Paulo para Rio de Janeiro de ônibus](https://descontobus.com.br/sao-paulo-rio/)
+- [Rio de Janeiro para Búzios de ônibus](https://descontobus.com.br/rio-buzios/)
+- [Búzios para Rio de Janeiro de ônibus](https://descontobus.com.br/buzios-rio/)
+- [Rio de Janeiro para Bom Jesus do Norte de ônibus](https://descontobus.com.br/rio-bom-jesus-do-norte/)
 
 ## Guias de destino
 - [Bom Jesus do Norte](https://descontobus.com.br/destinos/bom-jesus-do-norte/)
@@ -44,10 +44,10 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - Quem faz a viagem? A empresa de ônibus ou a companhia aérea que aparece no bilhete. A gente pesquisa, emite e acompanha você até o embarque.
 - Quanto é a taxa de serviço? Depende da viagem. Ela aparece separada da tarifa, por escrito, antes de você pagar. Você só paga se concordar.
 - Como eu pago? Pelo link da cotação ou por Pix, sempre na conta da empresa. A gente nunca pede pagamento em conta de pessoa física.
+- Por que aparece outro nome no Pix? No Pix, aparece o nome ALEXANDRE DE OLIVEIRA MAIA GOMES, que é a razão social da Descontobus (CNPJ 63.144.303/0001-06). É a conta da empresa.
 - Como recebo a passagem? O cartão de embarque chega no mesmo link da cotação. Na hora de embarcar, mostre no celular junto com um documento com foto.
 - Como sei que a passagem é válida? O bilhete é emitido no sistema da própria empresa de transporte e tem o localizador dela. Se quiser, você confere direto com a empresa.
 - Posso escolher o assento? No ônibus, sim. Você escolhe no mapa do ônibus, entre os lugares que estão livres na hora da compra.
-- Quanta bagagem posso levar no ônibus? Na viagem interestadual, até 30 kg no bagageiro e 5 kg de bagagem de mão, sem pagar a mais. Acima disso, a empresa pode cobrar o excesso.
 
 ## Contato
 - WhatsApp: (21) 98588-1025

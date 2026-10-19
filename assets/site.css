@@ -243,3 +243,21 @@ section[id]{scroll-margin-top:90px}
 @media (max-width:700px){.stepper.sm{grid-template-columns:1fr}.relcta{flex-wrap:wrap}}
 @media (prefers-reduced-motion:reduce){.js-rv .rv{opacity:1;transform:none;transition:none}.why article,.why .wimg img,.ptn span,.gcard,.relcta,.ddm{transition:none;animation:none}}
 @media screen and (max-width:640px){.ddm{grid-template-columns:1fr;max-height:70vh;overflow:auto;border-radius:0 0 14px 14px}.relcta{flex-wrap:wrap}}
+/* v1.60 (D-140): linhas dos dois WhatsApps (A4), data do preço (A3), nome no Pix (A1) e serviços da página inicial (A7) */
+.wah{display:flex;flex-direction:column;gap:4px;margin:12px 0 0;font-size:13px;line-height:1.45;opacity:.92}
+.ft-wah{color:var(--line);margin-top:14px}
+.links .wah{color:var(--line);text-align:center;margin:0}
+.pdt{display:block;font-size:11px;font-weight:500;opacity:.85;margin-top:3px}
+p.pdt{margin:6px 0 0;font-size:13px}
+.ft-bot .pixn{flex-basis:100%;order:3}
+.tiles.main3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tile.corp-t{background:var(--navy);border-color:var(--navy)}
+.tile.corp-t b,.tile.corp-t em{color:#fff}
+.tile.corp-t span{color:var(--line)}
+.svc-mini{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:18px}
+.svc-mini b{font-size:14px;color:var(--navy);margin-right:4px}
+.svc-mini a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font-size:14px}
+.svc-mini a:hover{border-color:var(--royal)}
+.svc-mini .i{width:18px;height:18px}
+.aff-n{margin:12px 0 0}
+@media (max-width:760px){.tiles.main3{grid-template-columns:1fr}.tiles.main3 .tile span{display:block}}
