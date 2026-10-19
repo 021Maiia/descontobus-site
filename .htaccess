@@ -8,6 +8,8 @@ Options -Indexes
   RewriteRule ^ https://descontobus.com.br%{REQUEST_URI} [R=301,L]
 </IfModule>
 <IfModule mod_headers.c>
+  # v1.67.0 (D-148): X-Frame-Options e frame-ancestors dizem quem pode emoldurar o nosso site e não atrapalham a Buson.
+  # Se um dia entrar CSP com regra de molduras, liberar só frame-src https://descontobus.buson.com.br
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   <FilesMatch "\.(webp|png|jpe?g|gif|css|js)$">
