@@ -20,6 +20,8 @@
   ping('pv');
   // v1.67.0 (D-148): toque na busca da Buson. Ao clicar dentro da moldura, a janela perde o foco e o foco vai para ela;
   // conta uma vez por página, sem nenhum dado de quem toca (o que acontece dentro da moldura o site não vê)
+  // v1.67.1 (D-149): a moldura cresce quando o cliente usa (calendário) e volta ao tamanho da busca quando sai; nada de ler a moldura
+  Array.prototype.forEach.call(document.querySelectorAll('.bz-wrap'),function(w){var f=w.querySelector('.buson-frame');if(!f||!w.classList)return;var op=function(){w.classList.add('is-open')},cl=function(){w.classList.remove('is-open')};if(window.matchMedia&&matchMedia('(pointer:fine)').matches){w.addEventListener('mouseenter',op);w.addEventListener('mouseleave',function(){if(document.activeElement!==f)cl()})}window.addEventListener('blur',function(){setTimeout(function(){if(document.activeElement===f)op()},0)});document.addEventListener('click',function(e){if(!w.contains(e.target))cl()});document.addEventListener('focusin',function(e){if(!w.contains(e.target))cl()})});
   var bf=document.querySelector&&document.querySelector('.buson-frame');if(bf&&window.addEventListener){var bt=false;window.addEventListener('blur',function(){setTimeout(function(){if(!bt&&document.activeElement===bf){bt=true;ping('buy','buson')}},0)})}
   // v1.50: o menu de serviços fecha ao clicar fora ou num link (antes do contador de cliques)
   if(document.querySelectorAll&&document.addEventListener)document.addEventListener('click',function(e){Array.prototype.forEach.call(document.querySelectorAll('details.dd[open]'),function(d){if(!d.contains(e.target)||(e.target.closest&&e.target.closest('.ddm a')))d.removeAttribute('open')})});
