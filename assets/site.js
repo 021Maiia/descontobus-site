@@ -21,6 +21,14 @@
   // v1.50: o menu de serviços fecha ao clicar fora ou num link (antes do contador de cliques)
   if(document.querySelectorAll&&document.addEventListener)document.addEventListener('click',function(e){Array.prototype.forEach.call(document.querySelectorAll('details.dd[open]'),function(d){if(!d.contains(e.target)||(e.target.closest&&e.target.closest('.ddm a')))d.removeAttribute('open')})});
   if(document.addEventListener)document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;var u=a.getAttribute('href')||'';if(u.indexOf('https://wa.me/')===0)ping('wa',waKind(u));else if(/sponsored/.test(a.getAttribute('rel')||''))ping('aff',net(u));else if(a.closest('.prod'))ping('shop',net(u))},true);
+  // v1.61.0 (D-142): botão "Menu" do celular
+  var hd=document.querySelector?document.querySelector('.hd'):null,tg=hd&&hd.querySelector('.mtog');
+  if(tg&&hd.classList){document.body.className+=' js-nav';
+    var setNav=function(o){hd.classList.toggle('open',o);tg.setAttribute('aria-expanded',o?'true':'false');tg.setAttribute('aria-label',o?'Fechar o menu':'Abrir o menu');var t=tg.querySelector('span');if(t)t.textContent=o?'Fechar':'Menu'};
+    tg.addEventListener('click',function(){setNav(!hd.classList.contains('open'))});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&hd.classList.contains('open')){setNav(false);tg.focus()}});
+    document.addEventListener('click',function(e){if(!hd.classList.contains('open'))return;var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!hd.contains(e.target)||(a&&hd.contains(a)))setNav(false)});
+  }
   // v1.36: trocar origem e destino; atalhos Hoje e Amanhã
   Array.prototype.forEach.call(document.querySelectorAll('form.sc'),function(s){
     var sw=s.querySelector('.swap');if(sw)sw.addEventListener('click',function(){var a=s.elements.origin,b=s.elements.destination,t=a.value;a.value=b.value;b.value=t});

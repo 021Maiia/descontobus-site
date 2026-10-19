@@ -260,4 +260,23 @@ p.pdt{margin:6px 0 0;font-size:13px}
 .svc-mini a:hover{border-color:var(--royal)}
 .svc-mini .i{width:18px;height:18px}
 .aff-n{margin:12px 0 0}
+/* v1.61.0 (D-142): menu do celular atrás do botão "Menu" e ajustes de toque (skill mobile-native) */
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+.btn,button,.mtog,.hd nav a,.dd summary,.ofr,.tile,.svc-mini a,.fab,.lk{touch-action:manipulation}
+.btn,button,.mtog,.dd summary,.fab{-webkit-user-select:none;user-select:none}
+.btn:active,.mtog:active{transform:scale(.97);transition:transform .1s ease-out}
+.mtog{display:none;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:1.5px solid rgba(255,255,255,.35);border-radius:12px;background:transparent;color:#fff;font:inherit;font-weight:700;font-size:15px;cursor:pointer}
+.mtog svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+.hd.open .mtog svg path{d:path("M6 6l12 12M18 6L6 18")}
+@media only screen and (max-width:640px){
+.js-nav .mtog{display:inline-flex}
+.js-nav .hd .wrap{gap:10px 12px}.js-nav .hd .btn{margin-left:auto}.js-nav .mtog{padding:0 12px}
+.js-nav .hd nav{display:none}
+.js-nav .hd.open nav{display:flex;flex-direction:column;flex-wrap:nowrap;gap:0;overflow:auto;max-height:calc(100dvh - 90px);overscroll-behavior:contain;padding:6px 0 10px;font-size:17px}
+.js-nav .hd.open nav>a,.js-nav .hd.open nav .dd>summary{display:flex;align-items:center;min-height:48px;padding:0 4px;border-top:1px solid rgba(255,255,255,.12)}
+.js-nav .hd.open nav .dd>summary{justify-content:space-between}
+.js-nav .hd.open .ddm{position:static;box-shadow:none;border-radius:14px;max-height:none;margin:4px 0 10px;padding:8px}
+}
+@media only screen and (max-width:420px){.js-nav .mtog{width:44px;padding:0;justify-content:center}.js-nav .mtog span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+@media (hover:none){.ofr:hover,.tile:hover,.why article:hover,.relcta:hover,.gcard:hover,.ptn span:hover{transform:none}.why article:hover .wimg img,.rcard:hover img{transform:none}}
 @media (max-width:760px){.tiles.main3{grid-template-columns:1fr}.tiles.main3 .tile span{display:block}}
