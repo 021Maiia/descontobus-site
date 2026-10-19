@@ -260,6 +260,26 @@ p.pdt{margin:6px 0 0;font-size:13px}
 .svc-mini a:hover{border-color:var(--royal)}
 .svc-mini .i{width:18px;height:18px}
 .aff-n{margin:12px 0 0}
+/* v1.62.0 (D-143): rodapé compacto no celular */
+.fc>summary{list-style:none;pointer-events:none}
+.fc>summary::-webkit-details-marker{display:none}
+.fc .fl{display:flex;flex-direction:column;gap:6px}
+.fc .fl a{text-decoration:none;color:var(--line)}
+@media only screen and (max-width:640px){
+.ft .ft-top{grid-template-columns:1fr;gap:0}
+.ft .ft-top .col:first-child{padding-bottom:16px}
+.ft .about{margin:8px 0 12px}
+.ft-logo{height:52px}
+.fc{border-top:1px solid rgba(255,255,255,.12)}
+.fc>summary{pointer-events:auto;cursor:pointer;display:flex;align-items:center;justify-content:space-between;min-height:48px}
+.fc>summary h4{margin:0}
+.fc>summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:-4px 6px 0 0;transition:transform .15s ease-out}
+.fc[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
+.fc .fl{padding:0 0 14px}
+.fc .fl a{display:flex;align-items:center;min-height:40px}
+.ft .ft-mid{margin-top:0;padding:12px 16px;gap:8px}
+.ft .ft-bot{font-size:11.5px;line-height:1.45;gap:4px 12px;padding:12px 16px 84px}.ft .ft-logo{height:46px}.ft .about,.ft .ft-top .col:first-child>b,.ft .pills b{display:none}.ft .pills{gap:6px}.ft .pill2{font-size:12px}
+}
 /* v1.61.0 (D-142): menu do celular atrás do botão "Menu" e ajustes de toque (skill mobile-native) */
 html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 .btn,button,.mtog,.hd nav a,.dd summary,.ofr,.tile,.svc-mini a,.fab,.lk{touch-action:manipulation}

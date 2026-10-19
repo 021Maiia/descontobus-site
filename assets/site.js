@@ -21,6 +21,8 @@
   // v1.50: o menu de serviços fecha ao clicar fora ou num link (antes do contador de cliques)
   if(document.querySelectorAll&&document.addEventListener)document.addEventListener('click',function(e){Array.prototype.forEach.call(document.querySelectorAll('details.dd[open]'),function(d){if(!d.contains(e.target)||(e.target.closest&&e.target.closest('.ddm a')))d.removeAttribute('open')})});
   if(document.addEventListener)document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;var u=a.getAttribute('href')||'';if(u.indexOf('https://wa.me/')===0)ping('wa',waKind(u));else if(/sponsored/.test(a.getAttribute('rel')||''))ping('aff',net(u));else if(a.closest('.prod'))ping('shop',net(u))},true);
+  // v1.62.0 (D-143): no celular, as seções do rodapé começam fechadas
+  try{if(window.matchMedia&&matchMedia('(max-width:640px)').matches)Array.prototype.forEach.call(document.querySelectorAll('details.fc'),function(d){d.removeAttribute('open')})}catch(e){}
   // v1.61.0 (D-142): botão "Menu" do celular
   var hd=document.querySelector?document.querySelector('.hd'):null,tg=hd&&hd.querySelector('.mtog');
   if(tg&&hd.classList){document.body.className+=' js-nav';
