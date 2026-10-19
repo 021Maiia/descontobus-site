@@ -24,6 +24,7 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - [Loja de viagem](https://descontobus.com.br/loja/): Produtos indicados para viajar melhor.
 - [Dúvidas frequentes](https://descontobus.com.br/duvidas/): Taxa, pagamento, bagagem, remarcação e documentos.
 - [Quem somos](https://descontobus.com.br/quem-somos/): A empresa e o jeito de trabalhar.
+- [Informações ao viajante](https://descontobus.com.br/informacoes-ao-viajante/): Documentos, bagagem, embarque, remarcação e ajuda em viagem.
 - [Blog](https://descontobus.com.br/blog/): Destinos e dicas de viagem.
 
 ## Rotas
