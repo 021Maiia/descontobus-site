@@ -40,10 +40,15 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - [São Paulo para Curitiba de ônibus](https://descontobus.com.br/sao-paulo-curitiba/)
 
 ## Guias de destino
+- [Belo Horizonte](https://descontobus.com.br/destinos/belo-horizonte/)
 - [Bom Jesus do Norte](https://descontobus.com.br/destinos/bom-jesus-do-norte/)
+- [Brasília](https://descontobus.com.br/destinos/brasilia/)
 - [Búzios](https://descontobus.com.br/destinos/buzios/)
+- [Curitiba](https://descontobus.com.br/destinos/curitiba/)
 - [Rio de Janeiro](https://descontobus.com.br/destinos/rio-de-janeiro/)
+- [Salvador](https://descontobus.com.br/destinos/salvador/)
 - [São Paulo](https://descontobus.com.br/destinos/sao-paulo/)
+- [Vitória](https://descontobus.com.br/destinos/vitoria/)
 
 ## Perguntas frequentes
 - A Descontobus é uma agência de verdade? Sim. Somos uma agência de viagens com CNPJ e cadastro no Cadastur, do Ministério do Turismo. Os dados da empresa ficam no rodapé de todas as páginas.
