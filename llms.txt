@@ -33,6 +33,11 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - [Rio de Janeiro para Búzios de ônibus](https://descontobus.com.br/rio-buzios/)
 - [Búzios para Rio de Janeiro de ônibus](https://descontobus.com.br/buzios-rio/)
 - [Rio de Janeiro para Bom Jesus do Norte de ônibus](https://descontobus.com.br/rio-bom-jesus-do-norte/)
+- [São Paulo para Salvador de ônibus](https://descontobus.com.br/sao-paulo-salvador/)
+- [São Paulo para Brasília de ônibus](https://descontobus.com.br/sao-paulo-brasilia/)
+- [Rio de Janeiro para Vitória de ônibus](https://descontobus.com.br/rio-vitoria/)
+- [Rio de Janeiro para Belo Horizonte de ônibus](https://descontobus.com.br/rio-belo-horizonte/)
+- [São Paulo para Curitiba de ônibus](https://descontobus.com.br/sao-paulo-curitiba/)
 
 ## Guias de destino
 - [Bom Jesus do Norte](https://descontobus.com.br/destinos/bom-jesus-do-norte/)

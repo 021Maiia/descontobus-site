@@ -4,7 +4,12 @@ Options -Indexes
 # v1.69.0 (D-151): trecho que virou página de rota leva para a rota, para quem chega pelo Google não cair na página de erro
 <IfModule mod_alias.c>
   RedirectMatch 301 ^/trechos/rio-de-janeiro/bom-jesus-do-norte-es(/(index\.html)?)?$ /rio-bom-jesus-do-norte/
+  RedirectMatch 301 ^/trechos/rio-de-janeiro/vitoria-es(/(index\.html)?)?$ /rio-vitoria/
+  RedirectMatch 301 ^/trechos/rio-de-janeiro/belo-horizonte-mg(/(index\.html)?)?$ /rio-belo-horizonte/
   RedirectMatch 301 ^/trechos/rio-de-janeiro/sao-paulo-sp(/(index\.html)?)?$ /rio-sao-paulo/
+  RedirectMatch 301 ^/trechos/sao-paulo/salvador-ba(/(index\.html)?)?$ /sao-paulo-salvador/
+  RedirectMatch 301 ^/trechos/sao-paulo/brasilia-df(/(index\.html)?)?$ /sao-paulo-brasilia/
+  RedirectMatch 301 ^/trechos/sao-paulo/curitiba-pr(/(index\.html)?)?$ /sao-paulo-curitiba/
   RedirectMatch 301 ^/trechos/sao-paulo/rio-de-janeiro-rj(/(index\.html)?)?$ /sao-paulo-rio/
 </IfModule>
 # v1.31.2: www vai para https://descontobus.com.br, para o Google não ver o site em dobro

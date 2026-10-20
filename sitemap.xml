@@ -55,7 +55,6 @@
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/sao-mateus-es/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/serra-es/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/vila-velha-es/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/vitoria-es/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/anapolis-go/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/caldas-novas-go/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/goiania-go/</loc><lastmod>2026-10-20</lastmod></url>
@@ -64,7 +63,6 @@
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/alfenas-mg/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/barbacena-mg/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/barroso-mg/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/belo-horizonte-mg/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/betim-mg/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/bicas-mg/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/rio-de-janeiro/bocaiuva-mg/</loc><lastmod>2026-10-20</lastmod></url>
@@ -277,7 +275,6 @@
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/riacho-de-santana-ba/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/ribeira-do-pombal-ba/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/ruy-barbosa-ba/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://descontobus.com.br/trechos/sao-paulo/salvador-ba/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/santana-ba/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/santo-estevao-ba/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/sao-desiderio-ba/</loc><lastmod>2026-10-20</lastmod></url>
@@ -310,7 +307,6 @@
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/sobral-ce/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/taua-ce/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/tiangua-ce/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://descontobus.com.br/trechos/sao-paulo/brasilia-df/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/alegre-es/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/bom-jesus-do-norte-es/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/cachoeiro-de-itapemirim-es/</loc><lastmod>2026-10-20</lastmod></url>
@@ -541,7 +537,6 @@
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/cianorte-pr/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/conselheiro-mairinck-pr/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/cornelio-procopio-pr/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://descontobus.com.br/trechos/sao-paulo/curitiba-pr/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/curiuva-pr/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/engenheiro-beltrao-pr/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/trechos/sao-paulo/figueira-pr/</loc><lastmod>2026-10-20</lastmod></url>
@@ -730,4 +725,9 @@
   <url><loc>https://descontobus.com.br/rio-buzios/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/buzios-rio/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://descontobus.com.br/rio-bom-jesus-do-norte/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://descontobus.com.br/sao-paulo-salvador/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://descontobus.com.br/sao-paulo-brasilia/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://descontobus.com.br/rio-vitoria/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://descontobus.com.br/rio-belo-horizonte/</loc><lastmod>2026-10-20</lastmod></url>
+  <url><loc>https://descontobus.com.br/sao-paulo-curitiba/</loc><lastmod>2026-10-20</lastmod></url>
 </urlset>
