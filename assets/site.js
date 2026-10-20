@@ -42,7 +42,7 @@
   Array.prototype.forEach.call(document.querySelectorAll('a[data-map]'),function(a){a.addEventListener('click',function(ev){var box=a.parentNode;if(!box||!document.createElement)return;ev.preventDefault();var f=document.createElement('iframe');f.src=a.getAttribute('data-map');f.title='Mapa de hotéis em '+(a.getAttribute('data-place')||'');f.loading='lazy';f.setAttribute('allowfullscreen','');f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');box.style.backgroundImage='none';box.innerHTML='';box.appendChild(f)})});
   Array.prototype.forEach.call(document.querySelectorAll('.bcats button'),function(b){b.addEventListener('click',function(){var c=b.getAttribute('data-cat');Array.prototype.forEach.call(document.querySelectorAll('.bcats button'),function(x){x.className=x===b?'on':''});Array.prototype.forEach.call(document.querySelectorAll('.bgrid [data-cat]'),function(x){x.hidden=!!c&&x.getAttribute('data-cat')!==c})})});
   // v1.62.0 (D-143): no celular, as seções do rodapé começam fechadas
-  try{if(window.matchMedia&&matchMedia('(max-width:640px)').matches)Array.prototype.forEach.call(document.querySelectorAll('details.fc'),function(d){d.removeAttribute('open')})}catch(e){}
+  try{if(window.matchMedia&&matchMedia('(max-width:640px)').matches)Array.prototype.forEach.call(document.querySelectorAll('details.fc.fm'),function(d){d.removeAttribute('open')})}catch(e){}
   // v1.61.0 (D-142): botão "Menu" do celular
   var hd=document.querySelector?document.querySelector('.hd'):null,tg=hd&&hd.querySelector('.mtog');
   if(tg&&hd.classList){document.body.className+=' js-nav';
