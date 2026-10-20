@@ -111,7 +111,8 @@ form.sc .go{height:50px;padding:0 26px;font-size:17px;border-radius:12px;white-s
 .nxt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:20px;border-radius:22px;padding:clamp(22px,4vw,44px);background:linear-gradient(110deg,#E8F1FC 45%,#bcd6f5);overflow:hidden}.nxt h2{margin:0 0 8px;font-family:"Barlow Condensed",sans-serif;font-weight:800;text-transform:uppercase;color:var(--navy);font-size:clamp(1.8rem,3.4vw,2.5rem)}.nxt p{margin:0 0 16px;color:var(--muted)}
 .nxt .pins{display:flex;flex-direction:column;gap:10px;align-items:flex-end}.nxt .pins span{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:10px 14px;box-shadow:0 8px 20px rgba(1,6,43,.12);font-weight:700;color:var(--navy)}.nxt .pins span:nth-child(2){margin-right:40px}.nxt .pins .i{color:var(--royal)}
 .faq.fq{max-width:none;gap:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}.faq.fq details{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 22px}.faq.fq details:last-child{border-bottom:0}.faq.fq summary{list-style:none;display:flex;justify-content:space-between;gap:16px;padding:18px 0;font-size:1rem}.faq.fq summary::-webkit-details-marker{display:none}.faq.fq summary:after{content:"";flex:none;width:10px;height:10px;border-right:2px solid var(--royal);border-bottom:2px solid var(--royal);transform:rotate(45deg);margin-top:4px;transition:transform .2s}.faq.fq details[open] summary:after{transform:rotate(-135deg);margin-top:9px}
-.ft{padding:56px 0 0}.ft .ft-top{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(4,minmax(0,1fr));gap:28px}.ft .ft-top .col{min-width:0}.ft .about{color:var(--line);font-size:14px;margin:12px 0}.ft h4{margin:0 0 10px;color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.06em}.ft .col a{text-decoration:none;color:var(--line)}.ft .col a:hover{color:#fff}
+.ft{padding:56px 0 0}.ft .ft-top{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px 48px;align-items:start} /* v1.76.0: só empresa, redes e atendimento */
+.ft-legal{display:flex;flex-wrap:wrap;gap:4px 14px;flex-basis:100%}.ft-legal a{color:var(--line);text-decoration:none}.ft-legal a:hover{text-decoration:underline}.ft .ft-top .col{min-width:0}.ft .about{color:var(--line);font-size:14px;margin:12px 0}.ft h4{margin:0 0 10px;color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.06em}.ft .col a{text-decoration:none;color:var(--line)}.ft .col a:hover{color:#fff}
 .ft .ft-mid{display:flex;flex-wrap:wrap;gap:16px 40px;align-items:center;justify-content:space-between;margin-top:36px;padding:22px 0;border-top:1px solid rgba(255,255,255,.12)}.ft .pills{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.ft .pills b{font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-right:6px}.ft .pill2{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:13px;font-weight:700;color:#fff}.ft .pill2 .i{width:16px;height:16px;color:var(--cyan)}
 .ft .ft-bot{padding:18px 0 26px;border-top:1px solid rgba(255,255,255,.12);font-size:13px;color:var(--line);display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
 .fab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;background:var(--ok);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:12px 18px 12px 14px;box-shadow:0 10px 26px rgba(1,6,43,.3)}.fab:hover{background:#155530;color:#fff}.fab .i{width:26px;height:26px}
@@ -357,12 +358,6 @@ p.pdt{margin:6px 0 0;font-size:13px}
 /* v1.62.0 (D-143): rodapé compacto no celular */
 .fc>summary{list-style:none;pointer-events:none}
 .fc>summary::-webkit-details-marker{display:none}
-/* v1.74.0: rodapé enxuto. Destinos, Serviços e A empresa ficam fechados (clique para abrir) em qualquer tela */
-.fc.fm>summary{pointer-events:auto;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px}
-.fc.fm>summary h4{margin:0}
-.fc.fm>summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin:-4px 6px 0 0;transition:transform .15s ease}
-.fc.fm[open]>summary::after{transform:rotate(-135deg);margin-top:4px}
-.fc.fm .fl{padding:6px 0 12px}
 .fc .fl{display:flex;flex-direction:column;gap:6px}
 .fc .fl a{text-decoration:none;color:var(--line)}
 @media only screen and (max-width:640px){
