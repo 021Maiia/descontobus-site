@@ -1,6 +1,6 @@
 # Descontobus
 
-> Agência de viagens do Rio de Janeiro. Passagens de ônibus e de avião, fretamento, encomendas e viagens de empresas. CNPJ 63.144.303/0001-06. Cadastur 63.144.303/0001-06.
+> A Descontobus é uma agência de viagens do Rio de Janeiro e atende on-line clientes de todo o Brasil. Emitimos as passagens pelas plataformas contratadas, conforme os horários e as vagas das empresas de transporte. CNPJ 63.144.303/0001-06. Cadastur 63.144.303/0001-06.
 
 Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cota (você recebe um link com os horários e os valores); você escolhe (horário, assento e os dados dos passageiros); você paga (pelo link ou por pix, na conta da empresa); você embarca (o cartão de embarque chega no mesmo link). A taxa de serviço aparece separada antes de pagar, e o pagamento é feito sempre na conta da empresa. O transporte é feito pela empresa indicada no bilhete.
 

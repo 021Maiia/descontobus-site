@@ -1,6 +1,12 @@
 # Site gerado pelo Descontobus OS. Não edite aqui: as mudanças são feitas pelo sistema.
 ErrorDocument 404 /404.html
 Options -Indexes
+# v1.69.0 (D-151): trecho que virou página de rota leva para a rota, para quem chega pelo Google não cair na página de erro
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/trechos/rio-de-janeiro/bom-jesus-do-norte-es(/(index\.html)?)?$ /rio-bom-jesus-do-norte/
+  RedirectMatch 301 ^/trechos/rio-de-janeiro/sao-paulo-sp(/(index\.html)?)?$ /rio-sao-paulo/
+  RedirectMatch 301 ^/trechos/sao-paulo/rio-de-janeiro-rj(/(index\.html)?)?$ /sao-paulo-rio/
+</IfModule>
 # v1.31.2: www vai para https://descontobus.com.br, para o Google não ver o site em dobro
 <IfModule mod_rewrite.c>
   RewriteEngine On

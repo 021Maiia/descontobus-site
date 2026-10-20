@@ -18,6 +18,8 @@
   function waKind(u){var m=/wa\.me\/55(\d+)/.exec(u),n=m?m[1]:'';if(n&&n===bot&&n!==wa)return 'bot';if(n&&n===wa&&n!==bot)return 'agent';var t='';try{t=decodeURIComponent((u.split('text=')[1]||'').replace(/\+/g,' '))}catch(e){}return /Descont[aã]o|comprar uma passagem pelo WhatsApp/i.test(t)?'bot':'agent'}
   function ping(t,a){gt(t,a);try{if(!api||!navigator.sendBeacon)return;var r='';try{var h=document.referrer?new URL(document.referrer).hostname:'';if(h&&h!==location.hostname)r=h}catch(e){}var v=src;navigator.sendBeacon(api+'/api/visita',new Blob([JSON.stringify({t:t,p:location.pathname,r:r,d:matchMedia('(max-width:768px)').matches?'m':'d',v:v,a:a||''})],{type:'text/plain'}))}catch(e){}}
   ping('pv');
+  // v1.69.0 (D-151) C7: cada preço sai com o último dia em que vale (data-pv); passado esse dia (horário de Brasília), vira "Consulte"
+  try{var hoje=new Date(Date.now()-108e5).toISOString().slice(0,10);Array.prototype.forEach.call(document.querySelectorAll('[data-pv]'),function(e){if(hoje>String(e.getAttribute('data-pv')||''))e.outerHTML=e.getAttribute('data-pvx')||''})}catch(e){}
   // v1.67.0 (D-148): toque na busca da Buson. Ao clicar dentro da moldura, a janela perde o foco e o foco vai para ela;
   // conta uma vez por página, sem nenhum dado de quem toca (o que acontece dentro da moldura o site não vê)
   // v1.67.1 (D-149): a moldura cresce quando o cliente usa (calendário) e volta ao tamanho da busca quando sai; nada de ler a moldura
