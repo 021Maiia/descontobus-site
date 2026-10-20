@@ -388,8 +388,9 @@ html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 .mtog{display:none;align-items:center;gap:6px;min-height:44px;padding:0 14px;border:1.5px solid rgba(255,255,255,.35);border-radius:12px;background:transparent;color:#fff;font:inherit;font-weight:700;font-size:15px;cursor:pointer}
 .mtog svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
 .hd.open .mtog svg path{d:path("M6 6l12 12M18 6L6 18")}
-/* v1.71.0: menu ☰ também no tablet (antes o menu quebrava em 2 linhas com links pequenos); v1.74.0: até 900 px, para o computador e o tablet deitado verem os links */
-@media only screen and (max-width:900px){
+/* v1.71.0: menu ☰ também no tablet; v1.74.0: os links voltam no computador; v1.75.0: ☰ até 960 px e, de 961 a 1180 px, menu compacto numa linha só (antes quebrava em 2 linhas entre 901 e 1100 px) */
+@media only screen and (min-width:961px) and (max-width:1180px){.hd .wrap{gap:12px}.hd nav{gap:2px 14px;font-size:14px}.hd nav>a,.hd nav .dd>summary{padding-left:0;padding-right:0}.hd .btn{padding:0 14px;font-size:14px}}
+@media only screen and (max-width:960px){
 .js-nav .mtog{display:inline-flex}
 .js-nav .hd .wrap{gap:10px 12px}.js-nav .hd .btn{margin-left:auto}.js-nav .mtog{padding:0 12px}
 .js-nav .hd nav{display:none}
