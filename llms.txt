@@ -5,15 +5,15 @@
 Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cota (você recebe um link com os horários e os valores); você escolhe (horário, assento e os dados dos passageiros); você paga (pelo link ou por pix, na conta da empresa); você embarca (o cartão de embarque chega no mesmo link). A taxa de serviço aparece separada antes de pagar, e o pagamento é feito sempre na conta da empresa. O transporte é feito pela empresa indicada no bilhete.
 
 ## Serviços
-- [Passagens rodoviárias](https://descontobus.com.br/servicos/passagens-de-onibus/): Cotamos nas principais viações e você escolhe o horário e o assento pelo link, sem fila.
-- [Passagens aéreas](https://descontobus.com.br/servicos/passagens-aereas/): Comparamos companhias e tarifas e cuidamos da emissão.
-- [Fretamento de ônibus e vans](https://descontobus.com.br/servicos/grupos-e-fretamento/): Ônibus para o seu grupo, com fretadora regular na ANTT.
-- [Envio de encomendas pelo ônibus](https://descontobus.com.br/servicos/envio-de-encomendas/): Mande documentos e pacotes no bagageiro do ônibus, de uma rodoviária para outra.
-- [Descontobus Corp](https://descontobus.com.br/servicos/viagens-para-empresas/): Uma pessoa cuida de todas as viagens da sua equipe, com fatura e relatório por centro de custo.
-- [Seguro viagem](https://descontobus.com.br/servicos/seguro-viagem/): Proteção para a viagem por poucos reais por passageiro.
-- [Pacote turístico](https://descontobus.com.br/servicos/pacote-turistico/): Passagem, hospedagem e seguro num pedido só, com uma pessoa cuidando de cada detalhe.
-- [Hospedagem](https://descontobus.com.br/servicos/hospedagem/): Hotel e pousada no destino, junto com a passagem.
-- [Aluguel de carros](https://descontobus.com.br/servicos/aluguel-de-carros/): Carro no destino para rodar a região, com as regras da locadora explicadas antes de reservar.
+- [Passagens rodoviárias](https://descontobus.com.br/servicos/passagens-de-onibus/): Você escolhe o horário e o assento e vê a taxa de serviço separada antes de pagar.
+- [Passagens aéreas](https://descontobus.com.br/servicos/passagens-aereas/): Antes de pagar, você vê o que a tarifa inclui e a regra para remarcar.
+- [Fretamento de ônibus e vans](https://descontobus.com.br/servicos/grupos-e-fretamento/): O fretamento é contratado pelo grupo, com empresa autorizada pela ANTT. A gente organiza e acompanha.
+- [Envio de encomendas pelo ônibus](https://descontobus.com.br/servicos/envio-de-encomendas/): O envio é feito pela transportadora, com preço, prazo e local de retirada informados antes.
+- [Descontobus Corp](https://descontobus.com.br/servicos/viagens-para-empresas/): Sem mensalidade: a empresa paga uma taxa por emissão, mostrada em cada pedido.
+- [Seguro viagem](https://descontobus.com.br/servicos/seguro-viagem/): Quer incluir seguro viagem? É opcional, e você vê as coberturas de cada plano antes de contratar.
+- [Pacote turístico](https://descontobus.com.br/servicos/pacote-turistico/): Passagem, hospedagem e passeios num pedido só, com o valor de cada parte por escrito.
+- [Hospedagem](https://descontobus.com.br/servicos/hospedagem/): Hotel ou pousada no destino da sua passagem, com a regra de cancelamento mostrada antes de reservar.
+- [Aluguel de carros](https://descontobus.com.br/servicos/aluguel-de-carros/): Carro no destino, com as regras da locadora explicadas antes de reservar.
 - [Produtos Digitais de Turismo & Viagens](https://descontobus.com.br/servicos/produtos-digitais/): Roteiros, guias e checklists de viagem em formato digital, para usar no celular.
 
 ## Páginas principais
