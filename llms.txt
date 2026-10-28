@@ -28,11 +28,11 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - [Blog](https://descontobus.com.br/blog/): Destinos e dicas de viagem.
 
 ## Rotas
-- [Rio de Janeiro para São Paulo de ônibus](https://descontobus.com.br/rio-sao-paulo/)
-- [São Paulo para Rio de Janeiro de ônibus](https://descontobus.com.br/sao-paulo-rio/)
-- [Rio de Janeiro para Búzios de ônibus](https://descontobus.com.br/rio-buzios/)
-- [Búzios para Rio de Janeiro de ônibus](https://descontobus.com.br/buzios-rio/)
-- [Rio de Janeiro para Bom Jesus do Norte de ônibus](https://descontobus.com.br/rio-bom-jesus-do-norte/)
+- [Rio de Janeiro para São Paulo de ônibus](https://descontobus.com.br/rio-sao-paulo/): a partir de R$ 70,12 + taxa de serviço (preço conferido em 27/10/2026)
+- [São Paulo para Rio de Janeiro de ônibus](https://descontobus.com.br/sao-paulo-rio/): a partir de R$ 69,57 + taxa de serviço (preço conferido em 27/10/2026)
+- [Rio de Janeiro para Búzios de ônibus](https://descontobus.com.br/rio-buzios/): a partir de R$ 91,77 + taxa de serviço (preço conferido em 27/10/2026)
+- [Búzios para Rio de Janeiro de ônibus](https://descontobus.com.br/buzios-rio/): a partir de R$ 82,19 + taxa de serviço (preço conferido em 27/10/2026)
+- [Rio de Janeiro para Bom Jesus do Norte de ônibus](https://descontobus.com.br/rio-bom-jesus-do-norte/): a partir de R$ 121,13 + taxa de serviço (preço conferido em 27/10/2026)
 - [São Paulo para Salvador de ônibus](https://descontobus.com.br/sao-paulo-salvador/)
 - [São Paulo para Brasília de ônibus](https://descontobus.com.br/sao-paulo-brasilia/)
 - [Rio de Janeiro para Vitória de ônibus](https://descontobus.com.br/rio-vitoria/)
