@@ -87,10 +87,9 @@
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
       if(!f.reportValidity())return;
-      if(!f.elements.consent.checked){show(f,'err','Marque que concorda com o uso dos dados para a cotação.');return}
       var get=function(n){var e=f.elements[n];return e?String(e.value||'').trim():''};
       var per={manha:'manha',tarde:'tarde',noite:'noite',madrugada:'madrugada'}[get('period_key')];
-      var body={name:get('name'),phone:get('phone'),origin:get('origin'),destination:get('destination'),depart_date:get('depart_date'),return_date:get('return_date')||null,pax:Number(get('pax')||1),periods:per?[per]:[],consent:true,site:get('website')};var obs=[get('service')?'Serviço: '+get('service'):'',via].filter(Boolean).join(' · ');if(obs)body.obs=obs;
+      var body={name:get('name'),phone:get('phone'),origin:get('origin'),destination:get('destination'),depart_date:get('depart_date'),return_date:get('return_date')||null,pax:Number(get('pax')||1),periods:per?[per]:[],site:get('website')};var obs=[get('service')?'Serviço: '+get('service'):'',via].filter(Boolean).join(' · ');if(obs)body.obs=obs;
       if(!api){toWa(f);return}
       var b=f.querySelector('button[type=submit]');if(b){b.disabled=true;b.textContent='Enviando...'}
       fetch(api+'/api/solicitar',{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(body)})
