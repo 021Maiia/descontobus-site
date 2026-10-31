@@ -3,7 +3,7 @@
   var viaNotes={"instagram":"Veio pelo link da bio do Instagram."}, via='';try{via=viaNotes[new URLSearchParams(location.search).get('via')]||''}catch(e){}
   // v1.60 (D-140) A11: origem da visita (utm_source, ?via= ou o site de onde veio), guardada só nesta aba (sem cookie)
   var src='';try{var qs=new URLSearchParams(location.search),rh=document.referrer?new URL(document.referrer).hostname:'';src=String(qs.get('utm_source')||qs.get('via')||(rh&&rh!==location.hostname?rh.replace(/^www\./,''):'')||'').toLowerCase().replace(/[^a-z0-9_.-]/g,'').slice(0,30);var ss=window.sessionStorage;if(ss){if(src)ss.setItem('dbx-src',src);else src=ss.getItem('dbx-src')||''}}catch(e){}
-  function waText(f){var v=function(n){var e=f.elements[n];return e?String(e.value||'').trim():''};var t=['Olá! Quero uma cotação'+(v('service')?' de '+v('service').toLowerCase():' de passagem')+'.','De: '+v('origin'),'Para: '+v('destination'),'Ida: '+br(v('depart_date'))];if(v('return_date'))t.push('Volta: '+br(v('return_date')));t.push('Passageiros: '+(v('pax')||'1'));var ps=f.elements.period_key;if(ps&&ps.value)t.push('Horário: '+ps.options[ps.selectedIndex].text);t.push('Nome: '+v('name'));if(via)t.push(via);return t.join('\n')}
+  function waText(f){var v=function(n){var e=f.elements[n];return e?String(e.value||'').trim():''};var t=['Olá! Quero uma cotação'+(v('service')?' de '+v('service').toLowerCase():' de passagem')+'.','De: '+v('origin'),'Para: '+v('destination'),'Ida: '+br(v('depart_date'))];if(v('return_date'))t.push('Volta: '+br(v('return_date')));if(/encomend/i.test(v('service'))){t[3]='Envio: '+br(v('depart_date'));t.push('O que vai: '+v('parcel_item'));t.push('Tamanho ou peso: '+v('parcel_size'))}else t.push('Passageiros: '+(v('pax')||'1'));var ps=f.elements.period_key;if(ps&&ps.value)t.push('Horário: '+ps.options[ps.selectedIndex].text);t.push('Nome: '+v('name'));if(via)t.push(via);return t.join('\n')}
   function br(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s);return m?m[3]+'/'+m[2]+'/'+m[1]:s}
   function toWa(f){ping('quote','wa');if(wa)location.href='https://wa.me/55'+wa+'?text='+encodeURIComponent(waText(f))}
   function show(f,cls,txt){var m=f.querySelector('.msg');if(m){m.className='msg '+cls;m.textContent=txt}}
@@ -84,12 +84,19 @@
   // v1.50 (D-130): cartões entram suavemente ao aparecer na tela; o menu de serviços fecha ao clicar fora ou num link
   if(document.querySelectorAll&&typeof IntersectionObserver!=='undefined'&&!(typeof matchMedia!=='undefined'&&matchMedia('(prefers-reduced-motion: reduce)').matches)){var rvs=document.querySelectorAll('.rv');if(rvs.length){document.body.className+=' js-rv';var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.className+=' on';io.unobserve(x.target)}})},{rootMargin:'0px 0px -40px 0px'});Array.prototype.forEach.call(rvs,function(el){io.observe(el)})}}
   Array.prototype.forEach.call(document.querySelectorAll('form.qf'),function(f){
+    // v1.101 (D-191): encomenda tem campos próprios; trocar o serviço troca os campos (e o que é obrigatório)
+    var sel=f.elements&&f.elements.service;
+    function parcel(){var p=!!(sel&&/encomend/i.test(sel.value||''));if(f.classList)f.classList.toggle('is-parcel',p);['parcel_item','parcel_size'].forEach(function(n){var e=f.elements[n];if(e)e.disabled=!p});['return_date','pax','period_key'].forEach(function(n){var e=f.elements[n];if(e)e.disabled=p});return p}
+    if(sel&&sel.tagName==='SELECT'&&sel.addEventListener)sel.addEventListener('change',parcel);
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
       if(!f.reportValidity())return;
       var get=function(n){var e=f.elements[n];return e?String(e.value||'').trim():''};
       var per={manha:'manha',tarde:'tarde',noite:'noite',madrugada:'madrugada'}[get('period_key')];
-      var body={name:get('name'),phone:get('phone'),origin:get('origin'),destination:get('destination'),depart_date:get('depart_date'),return_date:get('return_date')||null,pax:Number(get('pax')||1),periods:per?[per]:[],site:get('website')};var obs=[get('service')?'Serviço: '+get('service'):'',via].filter(Boolean).join(' · ');if(obs)body.obs=obs;
+      var pc=parcel();
+      var body={name:get('name'),phone:get('phone'),origin:get('origin'),destination:get('destination'),depart_date:get('depart_date'),return_date:pc?null:(get('return_date')||null),pax:pc?1:Number(get('pax')||1),periods:pc||!per?[]:[per],site:get('website')};
+      if(get('service'))body.service=get('service');if(location.pathname)body.page=location.pathname;if(pc)body.parcel={item:get('parcel_item'),size:get('parcel_size')};
+      var obs=[get('service')?'Serviço: '+get('service'):'',pc?'Encomenda: '+[get('parcel_item'),get('parcel_size')].filter(Boolean).join(', '):'',via].filter(Boolean).join(' · ');if(obs)body.obs=obs.slice(0,300);
       if(!api){toWa(f);return}
       var b=f.querySelector('button[type=submit]');if(b){b.disabled=true;b.textContent='Enviando...'}
       fetch(api+'/api/solicitar',{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(body)})
