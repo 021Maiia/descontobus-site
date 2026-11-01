@@ -322,6 +322,9 @@ p.pdt{margin:6px 0 0;font-size:13px}
 .hc-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
 .hc-track::-webkit-scrollbar{display:none}
 .hc-s{position:relative;flex:0 0 100%;scroll-snap-align:start;padding:clamp(48px,7vw,96px) 0 clamp(120px,12vw,150px);overflow:hidden}
+/* v1.105.0 (D-195): texto de cada destaque no meio da foto, sem vão embaixo quando o texto é curto */
+.hc-s{display:flex;flex-direction:column;justify-content:center}
+.hc-s>.wrap{width:100%}
 @media only screen and (max-width:640px){.hc-s{padding-bottom:120px}}
 .hc-s:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,6,43,.95) 0%,rgba(1,6,43,.82) 42%,rgba(1,6,43,.35) 100%);z-index:1}
 .hc-s h2{font-size:clamp(2.4rem,5.5vw,4.2rem);margin:0}
