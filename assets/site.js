@@ -4,7 +4,18 @@
   var viaNotes={"instagram":"Veio pelo Instagram.","tiktok":"Veio pelo TikTok.","facebook":"Veio pelo Facebook.","threads":"Veio pelo Threads.","youtube":"Veio pelo YouTube.","linkedin":"Veio pelo LinkedIn.","gbp":"Veio pelo Google Perfil da Empresa.","whatsapp":"Veio pelo WhatsApp.","x":"Veio pelo X (Twitter)."}, viaAlias={"ig":"instagram","insta":"instagram","fb":"facebook","tt":"tiktok","yt":"youtube","li":"linkedin","gmb":"gbp","perfil":"gbp","google-perfil":"gbp","wpp":"whatsapp","wa":"whatsapp","zap":"whatsapp","twitter":"x"}, via='';try{var vq=new URLSearchParams(location.search),vk=String(vq.get('via')||vq.get('utm_source')||'').toLowerCase().trim(),vs=null;try{vs=window.sessionStorage}catch(e){}if(!vk&&vs)vk=vs.getItem('dbx-via')||'';var own=function(o,x){return Object.prototype.hasOwnProperty.call(o,x)?o[x]:''};vk=own(viaAlias,vk)||vk;if(!own(viaNotes,vk)){vk=vk.split(/[-_]/)[0];vk=own(viaAlias,vk)||vk}via=own(viaNotes,vk)||'';if(via&&vs)vs.setItem('dbx-via',vk)}catch(e){}
   // v1.60 (D-140) A11: origem da visita (utm_source, ?via= ou o site de onde veio), guardada só nesta aba (sem cookie)
   var src='';try{var qs=new URLSearchParams(location.search),rh=document.referrer?new URL(document.referrer).hostname:'';src=String(qs.get('utm_source')||qs.get('via')||(rh&&rh!==location.hostname?rh.replace(/^www\./,''):'')||'').toLowerCase().replace(/[^a-z0-9_.-]/g,'').slice(0,30);var ss=window.sessionStorage;if(ss){if(src)ss.setItem('dbx-src',src);else src=ss.getItem('dbx-src')||''}}catch(e){}
-  function waText(f){var v=function(n){var e=f.elements[n];return e?String(e.value||'').trim():''};var t=['Olá! Quero uma cotação'+(v('service')?' de '+v('service').toLowerCase():' de passagem')+'.','De: '+v('origin'),'Para: '+v('destination'),'Ida: '+br(v('depart_date'))];if(v('return_date'))t.push('Volta: '+br(v('return_date')));if(/encomend/i.test(v('service'))){t[3]='Envio: '+br(v('depart_date'));t.push('O que vai: '+v('parcel_item'));t.push('Tamanho ou peso: '+v('parcel_size'))}else t.push('Passageiros: '+(v('pax')||'1'));var ps=f.elements.period_key;if(ps&&ps.value)t.push('Horário: '+ps.options[ps.selectedIndex].text);t.push('Nome: '+v('name'));if(via)t.push(via);return t.join('\n')}
+  function waText(f){var v=function(n){var e=f.elements[n];return e?String(e.value||'').trim():''};var t=['Olá! Quero uma cotação'+(v('service')?' de '+v('service').toLowerCase():' de passagem')+'.','De: '+v('origin'),'Para: '+v('destination'),'Ida: '+br(v('depart_date'))];if(v('return_date'))t.push('Volta: '+br(v('return_date')));if(/encomend/i.test(v('service'))){t[3]='Envio: '+br(v('depart_date'));t.push('O que vai: '+v('parcel_item'));t.push('Tamanho ou peso: '+v('parcel_size'))}else t.push('Passageiros: '+(v('pax')||'1'));var ps=f.elements.period_key;if(ps&&ps.value&&!ps.disabled)t.push('Horário: '+ps.options[ps.selectedIndex].text);pkv(f).forEach(function(x){t.push(x[0]+': '+x[1])});t.push('Nome: '+v('name'));if(via)t.push(via);return t.join('\n')}
+  // v1.123 (D-216): perguntas do pacote e da hospedagem, criadas só quando o serviço pede
+  var PK=[{"k":"transport","l":"Como vai viajar","o":["Ônibus","Carro próprio","Avião","Ainda não sei"],"y":"pacote"},{"k":"lodging","l":"Tipo de hospedagem","o":["Pousada","Hotel","Resort","Tanto faz"]},{"k":"meals","l":"Refeições","o":["Só café da manhã","Meia pensão","Pensão completa","Tudo incluído","Tanto faz"]},{"k":"budget","l":"Valor por pessoa","o":["Até R$ 500","R$ 500 a R$ 1.000","R$ 1.000 a R$ 2.000","Acima de R$ 2.000","Prefiro ver opções"]},{"k":"flex","l":"Datas flexíveis?","o":["Sim","Não"]},{"k":"near","l":"Perto da praia ou do centro faz diferença?","o":["Sim","Não"],"x":1},{"k":"occasion","l":"Ocasião especial","o":["Aniversário","Lua de mel","Férias em família","Outra"],"x":1,"y":"pacote"},{"k":"kids","l":"Crianças (quantas e idades)","t":60,"x":1}],PKD=["Recebemos o seu pedido.","Até o próximo dia útil, mandamos até 3 opções no seu WhatsApp.","Cada opção vem com o preço e a taxa de serviço separada.","Atendimento: de segunda a sexta, das 8h às 19h, e sábado, das 8h às 13h."];
+  function pks(f){var e=f.elements.service,v=e?String(e.value||''):'';return /pacote/i.test(v)?'pacote':/hosped|hotel/i.test(v)?'hospedagem':''}
+  function pkv(f){var o=[];if(!pks(f))return o;PK.forEach(function(q){var e=f.elements['pk_'+q.k];if(e&&!e.disabled&&String(e.value||'').trim())o.push([q.l.replace(/[?]$/,''),String(e.value).trim(),q.k])});return o}
+  function pkSet(f){var s=pks(f),box=f.querySelector('.qf-pk'),pe=f.elements.period_key;
+    if(pe&&pe.parentNode){pe.disabled=!!s||f.classList.contains('is-parcel');pe.parentNode.style.display=s?'none':''}
+    if(box&&box.getAttribute('data-s')!==s){box.parentNode.removeChild(box);box=null}
+    if(!s||box)return s;
+    var h='';PK.forEach(function(q){if(q.y&&q.y!==s)return;h+='<label>'+q.l+(q.x?' <small>(opcional)</small>':'')+(q.t?'<input name="pk_'+q.k+'" maxlength="'+q.t+'" placeholder="Ex.: 2, de 4 e 7 anos">':'<select name="pk_'+q.k+'"'+(q.x?'':' required')+'><option value="">'+(q.x?'Se quiser, escolha':'Escolha')+'</option>'+q.o.map(function(o){return '<option>'+o+'</option>'}).join('')+'</select>')+'</label>'});
+    box=document.createElement('div');box.className='g qf-pk';box.setAttribute('data-s',s);box.innerHTML=h;f.insertBefore(box,f.querySelector('.hp'));return s}
+  function pkDone(f){var b=document.createElement('div');b.className='msg ok';b.setAttribute('role','status');b.innerHTML=PKD.join('<br>');f.innerHTML='<b class="t" style="font-size:1.7rem;color:var(--navy)">Pedido enviado</b>';f.appendChild(b);if(f.scrollIntoView)f.scrollIntoView({block:'start'})}
   function br(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s);return m?m[3]+'/'+m[2]+'/'+m[1]:s}
   function toWa(f){ping('quote','wa');if(wa)location.href='https://wa.me/55'+wa+'?text='+encodeURIComponent(waText(f))}
   function show(f,cls,txt){var m=f.querySelector('.msg');if(m){m.className='msg '+cls;m.textContent=txt}}
@@ -115,21 +126,23 @@
     // v1.101 (D-191): encomenda tem campos próprios; trocar o serviço troca os campos (e o que é obrigatório)
     var sel=f.elements&&f.elements.service;
     function parcel(){var p=!!(sel&&/encomend/i.test(sel.value||''));if(f.classList)f.classList.toggle('is-parcel',p);['parcel_item','parcel_size'].forEach(function(n){var e=f.elements[n];if(e)e.disabled=!p});['return_date','pax','period_key'].forEach(function(n){var e=f.elements[n];if(e)e.disabled=p});return p}
-    if(sel&&sel.tagName==='SELECT'&&sel.addEventListener)sel.addEventListener('change',parcel);
+    if(sel&&sel.tagName==='SELECT'&&sel.addEventListener)sel.addEventListener('change',function(){parcel();pkSet(f)});
+    pkSet(f);
     f.addEventListener('submit',function(ev){
       ev.preventDefault();
       if(!f.reportValidity())return;
       var get=function(n){var e=f.elements[n];return e?String(e.value||'').trim():''};
       var per={manha:'manha',tarde:'tarde',noite:'noite',madrugada:'madrugada'}[get('period_key')];
-      var pc=parcel();
-      var body={name:get('name'),phone:get('phone'),origin:get('origin'),destination:get('destination'),depart_date:get('depart_date'),return_date:pc?null:(get('return_date')||null),pax:pc?1:Number(get('pax')||1),periods:pc||!per?[]:[per],site:get('website')};
+      var pc=parcel(),pk=pkSet(f),pkl=pkv(f);
+      var body={name:get('name'),phone:get('phone'),origin:get('origin'),destination:get('destination'),depart_date:get('depart_date'),return_date:pc?null:(get('return_date')||null),pax:pc?1:Number(get('pax')||1),periods:pc||pk||!per?[]:[per],site:get('website')};if(pk){body.pkg={};pkl.forEach(function(x){body.pkg[x[2]]=x[1]})}
       if(get('service'))body.service=get('service');if(location.pathname)body.page=location.pathname;if(pc)body.parcel={item:get('parcel_item'),size:get('parcel_size')};
-      var obs=[get('service')?'Serviço: '+get('service'):'',pc?'Encomenda: '+[get('parcel_item'),get('parcel_size')].filter(Boolean).join(', '):'',via].filter(Boolean).join(' · ');if(obs)body.obs=obs.slice(0,300);
+      var obs=[get('service')?'Serviço: '+get('service'):'',pc?'Encomenda: '+[get('parcel_item'),get('parcel_size')].filter(Boolean).join(', '):'',pk&&pkl.length?'Pacote: '+pkl.map(function(x){return x[1]}).join(', '):'',via].filter(Boolean).join(' · ');if(obs)body.obs=obs.slice(0,300);
       if(!api){toWa(f);return}
       var b=f.querySelector('button[type=submit]');if(b){b.disabled=true;b.textContent='Enviando...'}
       fetch(api+'/api/solicitar',{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:JSON.stringify(body)})
         .then(function(r){return r.json().then(function(j){return {ok:r.ok,status:r.status,j:j}})})
         .then(function(x){
+          if(x.ok&&x.j.link&&pk){ping('quote','site');pkDone(f);return}
           if(x.ok&&x.j.link){ping('quote','site');show(f,'ok','Pedido recebido! Abrindo a sua página da cotação...');location.href=api+x.j.link;return}
           if(x.status===404||x.status===403||x.status===429){toWa(f);return}
           show(f,'err',(x.j&&x.j.error)||'Não deu para enviar agora. Tente de novo ou fale pelo WhatsApp.');
