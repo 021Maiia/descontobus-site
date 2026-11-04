@@ -84,6 +84,33 @@
   Array.prototype.forEach.call(document.querySelectorAll('a[data-tr-o]'),function(a){a.addEventListener('click',function(ev){if(!bot)return;ev.preventDefault();ping('buy');var t='Olá, Descontão! Quero comprar passagem de '+a.getAttribute('data-tr-o')+' para '+a.getAttribute('data-tr-d')+'.';if(via)t+='\n'+via;location.href='https://wa.me/55'+bot+'?text='+encodeURIComponent(t)})});
   // v1.50 (D-130): cartões entram suavemente ao aparecer na tela; o menu de serviços fecha ao clicar fora ou num link
   if(document.querySelectorAll&&typeof IntersectionObserver!=='undefined'&&!(typeof matchMedia!=='undefined'&&matchMedia('(prefers-reduced-motion: reduce)').matches)){var rvs=document.querySelectorAll('.rv');if(rvs.length){document.body.className+=' js-rv';var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.className+=' on';io.unobserve(x.target)}})},{rootMargin:'0px 0px -40px 0px'});Array.prototype.forEach.call(rvs,function(el){io.observe(el)})}}
+  // v1.122.0 (D-215): Origem e Destino da cotação sugerem cidades: primeiro as das rotas que já vendemos (no próprio formulário),
+  // depois as do Brasil com UF (assets/cidades.json, baixado uma vez, só quando o cliente toca no campo). Digitar livre continua valendo.
+  Array.prototype.forEach.call(document.querySelectorAll('form.qf[data-rc]'),function(f){
+    var rc=[];try{rc=JSON.parse(f.getAttribute('data-rc')||'[]')}catch(e){}
+    var fd=function(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim().toLowerCase()};
+    var url=f.getAttribute('data-cities'),all=null,allF=null,ld=null;
+    var load=function(){if(ld||!url||typeof fetch!=='function')return ld||Promise.resolve();ld=fetch(url).then(function(r){return r.ok?r.json():[]}).then(function(l){all=Array.isArray(l)?l:[];allF=all.map(fd)}).catch(function(){all=[];allF=[]});return ld};
+    var match=function(q){var k=fd(q),out=[],seen={},max=8;
+      rc.forEach(function(c){var x=fd(c);if(out.length<max&&!seen[x]&&(!k||x.indexOf(k)===0||x.indexOf(' '+k)>=0)){seen[x]=1;out.push(c)}});
+      if(k.length<2||!all)return out;var p=[],s2=[];
+      for(var i=0;i<all.length&&out.length+p.length<max;i++){var x=allF[i];if(seen[x]||seen[x.split(' - ')[0]])continue;if(x.indexOf(k)===0)p.push(all[i]);else if(s2.length<max&&x.indexOf(' '+k)>=0)s2.push(all[i])}
+      return out.concat(p,s2).slice(0,max)};
+    var small=function(){return window.matchMedia&&matchMedia('(max-width:640px)').matches};
+    ['origin','destination'].forEach(function(n){var t=f.elements[n],ul=t&&document.getElementById(t.getAttribute('aria-controls')||'');if(!ul)return;
+      var hide=function(){ul.hidden=true;t.setAttribute('aria-expanded','false');t.removeAttribute('aria-activedescendant')};
+      var show=function(){if(document.activeElement!==t)return;var it=match(t.value);ul.innerHTML='';it.forEach(function(c,i){var li=document.createElement('li');li.setAttribute('role','option');li.id=ul.id+'-'+i;li.setAttribute('aria-selected','false');li.setAttribute('data-v',c);li.textContent=c;ul.appendChild(li)});if(!it.length||(it.length===1&&fd(it[0])===fd(t.value)))return hide();ul.hidden=false;t.setAttribute('aria-expanded','true')};
+      var pick=function(v){t.value=v;hide()};
+      t.addEventListener('focus',function(){show();load().then(show);if(small()&&t.scrollIntoView)setTimeout(function(){if(document.activeElement===t)t.scrollIntoView({block:'start'})},300)});
+      t.addEventListener('input',function(){show();if(!all)load().then(show)});
+      t.addEventListener('blur',function(){setTimeout(function(){if(document.activeElement!==t)hide()},150)});
+      t.addEventListener('keydown',function(e){var o=ul.hidden?[]:ul.querySelectorAll('li');if(!o.length)return;var i=-1;Array.prototype.forEach.call(o,function(x,j){if(x.className==='on')i=j});
+        if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();i=e.key==='ArrowDown'?(i+1)%o.length:(i<=0?o.length-1:i-1);Array.prototype.forEach.call(o,function(x,j){x.className=j===i?'on':'';x.setAttribute('aria-selected',j===i?'true':'false')});t.setAttribute('aria-activedescendant',o[i].id);if(o[i].scrollIntoView)o[i].scrollIntoView({block:'nearest'})}
+        else if(e.key==='Enter'&&i>=0){e.preventDefault();pick(o[i].getAttribute('data-v'))}
+        else if(e.key==='Escape'||e.key==='Esc'){e.preventDefault();hide()}});
+      ul.addEventListener('mousedown',function(e){e.preventDefault()});
+      ul.addEventListener('click',function(e){e.preventDefault();var li=e.target&&e.target.closest&&e.target.closest('li[data-v]');if(li)pick(li.getAttribute('data-v'))})});
+  });
   Array.prototype.forEach.call(document.querySelectorAll('form.qf'),function(f){
     // v1.101 (D-191): encomenda tem campos próprios; trocar o serviço troca os campos (e o que é obrigatório)
     var sel=f.elements&&f.elements.service;

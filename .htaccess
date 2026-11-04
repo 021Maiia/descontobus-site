@@ -30,7 +30,7 @@ Options -Indexes
   # Se um dia entrar CSP com regra de molduras, liberar só frame-src https://descontobus.buson.com.br
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
-  <FilesMatch "\.(webp|png|jpe?g|gif|css|js)$">
+  <FilesMatch "\.(webp|png|jpe?g|gif|css|js|json)$">
     Header set Cache-Control "public, max-age=604800"
   </FilesMatch>
   # v1.34.2: páginas sempre conferidas com o servidor (sem isso o navegador guardava a página velha por horas)
