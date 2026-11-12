@@ -50,6 +50,23 @@
 .lj-empty{text-align:center;padding:30px;color:var(--muted)}
 @media (max-width:600px){.lj-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.lj-in{padding:10px}.lj-v{font-size:25px}.lj-row{grid-auto-columns:minmax(160px,170px)}.lj-btn{font-size:13px;padding:9px 6px}.lj-top{padding:24px 0 20px}.lj-sh h2{font-size:1.35rem}}
 @media (prefers-reduced-motion:reduce){.lj-card{transition:none}.lj-card:hover{transform:none}}
+/* v1.148.0 (D-247): vitrine no jeito do Mercado Livre (fundo cinza, cartão branco sem borda, preço grande em fonte normal, link azul) */
+.lj{background:#EDEDED}
+.lj-card{border:0;border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.lj-card:hover{box-shadow:0 8px 18px rgba(0,0,0,.15);transform:none}
+.lj-img{padding:16px;border-bottom:1px solid #F2F2F2}
+.lj-in{gap:4px}
+.lj-card h3{font-weight:400;font-size:14px;line-height:1.3;color:#333}
+.lj-card h3 a{color:#333}
+.lj-v{font-family:Barlow,Arial,sans-serif;font-weight:400;font-size:26px;line-height:1.1;color:#333}
+.lj-v span{font-size:18px;vertical-align:0;margin-right:4px}
+.lj-v sup{font-size:13px;vertical-align:9px}
+.lj-st{background:#F5F5F5;color:#666}
+.lj-dg{background:#E8F4FD;color:#2968C8}
+.lj-btn{background:none;color:#2968C8;padding:8px 0 0;text-align:left;font-weight:600;border-radius:0}
+.lj-btn:hover{background:none;color:var(--navy);text-decoration:underline}
+.lj-sh h2{color:#333}
+@media (max-width:600px){.lj-v{font-size:22px}.lj-img{padding:10px}}
 /* v1.87 (D-174): fontes reserva com as medidas da Barlow (Arial/Helvetica e Roboto ajustadas). Enquanto a fonte do Google não chega, o texto ocupa o mesmo espaço e nada pula na tela (o PageSpeed media 0,143 de pulo na caixa de busca). */
 @font-face{font-family:BCR;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Neue Bold"),local("HelveticaNeue-Bold"),local("Helvetica Bold"),local("Helvetica-Bold");font-weight:600 900;size-adjust:68%}@font-face{font-family:BCR;src:local("Arial"),local("ArialMT"),local("Helvetica Neue"),local("HelveticaNeue"),local("Helvetica");font-weight:100 599;size-adjust:68%}@font-face{font-family:BCRA;src:local("Roboto Bold"),local("Roboto-Bold");font-weight:600 900;size-adjust:73%}@font-face{font-family:BCRA;src:local("Roboto"),local("Roboto-Regular");font-weight:100 599;size-adjust:73%}@font-face{font-family:BR;src:local("Segoe UI Bold"),local("SegoeUI-Bold"),local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Neue Bold"),local("HelveticaNeue-Bold");font-weight:600 900;size-adjust:91%}@font-face{font-family:BR;src:local("Segoe UI"),local("SegoeUI"),local("Arial"),local("ArialMT"),local("Helvetica Neue"),local("HelveticaNeue");font-weight:100 599;size-adjust:95%}@font-face{font-family:BRA;src:local("Roboto"),local("Roboto-Regular");size-adjust:99%}
 :root{--navy:#01062B;--royal:#044BAC;--cyan:#1EB0D0;--surface:#F3F6FA;--ink:#0B1633;--muted:#52607A;--line:#DCE3EE;--ok:#1C6B3E;--r:16px}
