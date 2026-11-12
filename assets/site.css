@@ -1,3 +1,55 @@
+/* v1.146.0 (D-245): loja com cara de vitrine de marketplace */
+.lj-top{background:linear-gradient(135deg,#01062B 0%,#044BAC 100%);color:#fff;padding:34px 0 26px}
+.lj-hd .k{color:var(--cyan);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:13px}
+.lj-hd h1{font-family:'Barlow Condensed',var(--fc,Arial Narrow,sans-serif);font-weight:800;font-size:clamp(2rem,4.5vw,3rem);line-height:1;text-transform:uppercase;margin:6px 0 8px;color:#fff}
+.lj-hd p{margin:0 0 18px;max-width:640px;color:#DCE3EE}
+.lj-search{display:flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:4px 8px 4px 18px;max-width:720px;box-shadow:0 10px 30px rgba(1,6,43,.35)}
+.lj-search svg{width:20px;height:20px;stroke:#52607A;fill:none;stroke-width:2;flex:none}
+.lj-search input{flex:1;border:0;outline:0;font:500 16px Barlow,Arial,sans-serif;color:var(--ink);padding:11px 0;background:transparent;min-width:0}
+.lj-trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;margin:16px 0 0;padding:0;font-size:14px;color:#DCE3EE}
+.lj-trust li::before{content:"✓ ";color:var(--cyan);font-weight:800}
+.lj-cats{position:sticky;top:72px;z-index:20;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(1,6,43,.06)}
+.lj-cats .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+.lj-cats .wrap::-webkit-scrollbar{display:none}
+.lj-cats button{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font:600 14px Barlow,Arial,sans-serif;cursor:pointer;white-space:nowrap}
+.lj-cats button span{color:var(--muted);font-weight:500;margin-left:2px}
+.lj-cats button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.lj-cats button.on span{color:#9FB3D1}
+.lj{background:var(--surface);padding:6px 0 40px}
+.lj-sh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:26px 0 12px}
+.lj-sh h2{font-family:'Barlow Condensed',var(--fc,Arial Narrow,sans-serif);font-weight:800;font-size:1.6rem;line-height:1;text-transform:uppercase;color:var(--navy);margin:0}
+.lj-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:24px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.lj-bar select{margin-left:8px;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font:500 14px Barlow,Arial,sans-serif;background:#fff;color:var(--ink)}
+.lj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.lj-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,230px);gap:14px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.lj-row .lj-card{scroll-snap-align:start}
+.lj>.wrap,.lj-shelf,.lj-sec,.lj-bar,.lj-grid,.lj-row{min-width:0;max-width:100%}.lj-grid>*,.lj-row>*{min-width:0}.lj-top .wrap{min-width:0}
+.lj-card{background:#fff;border-radius:14px;border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .2s ease,transform .2s ease}
+.lj-card[hidden],.lj-sec[hidden],.lj-shelf[hidden]{display:none}
+.lj-card:hover{box-shadow:0 12px 28px rgba(1,6,43,.14);transform:translateY(-2px)}
+.lj-img{display:flex;align-items:center;justify-content:center;background:#fff;aspect-ratio:1/1;padding:14px;border-bottom:1px solid #EEF2F7}
+.lj-img img{width:100%;height:100%;object-fit:contain}
+.lj-noimg{color:var(--muted);font-size:13px}
+.lj-in{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.lj-tags{display:flex;gap:6px;flex-wrap:wrap;min-height:20px}
+.lj-st,.lj-dg{font:700 11px Barlow,Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;padding:3px 8px;border-radius:999px;background:#EAF1FB;color:var(--royal)}
+.lj-dg{background:#E6F7FB;color:#0E8AA6}
+.lj-card h3{font:600 15px/1.3 Barlow,Arial,sans-serif;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+.lj-card h3 a{color:var(--ink);text-decoration:none}
+.lj-card h3 a:hover{color:var(--royal)}
+.lj-pr small{display:block;font-size:12px;color:var(--muted)}
+.lj-v{font-family:'Barlow Condensed',var(--fc,Arial Narrow,sans-serif);font-weight:800;font-size:32px;line-height:1;color:var(--navy)}
+.lj-v span{font-size:16px;margin-right:3px;vertical-align:11px}
+.lj-v sup{font-size:16px;vertical-align:12px}
+.lj-pn{margin:4px 0 0;font-size:12px;line-height:1.3;color:var(--muted)}
+.lj-ds{margin:0;font-size:13px;line-height:1.35;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lj-sec .aff-n{margin:12px 0 0}
+.lj-np{font-size:14px;font-weight:600;color:var(--royal)}
+.lj-btn{margin-top:auto;display:block;text-align:center;background:var(--royal);color:#fff;border-radius:10px;padding:10px;font:700 14px Barlow,Arial,sans-serif;text-decoration:none}
+.lj-btn:hover{background:var(--navy);color:#fff}
+.lj-empty{text-align:center;padding:30px;color:var(--muted)}
+@media (max-width:600px){.lj-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.lj-in{padding:10px}.lj-v{font-size:25px}.lj-row{grid-auto-columns:minmax(160px,170px)}.lj-btn{font-size:13px;padding:9px 6px}.lj-top{padding:24px 0 20px}.lj-sh h2{font-size:1.35rem}}
+@media (prefers-reduced-motion:reduce){.lj-card{transition:none}.lj-card:hover{transform:none}}
 /* v1.87 (D-174): fontes reserva com as medidas da Barlow (Arial/Helvetica e Roboto ajustadas). Enquanto a fonte do Google não chega, o texto ocupa o mesmo espaço e nada pula na tela (o PageSpeed media 0,143 de pulo na caixa de busca). */
 @font-face{font-family:BCR;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Neue Bold"),local("HelveticaNeue-Bold"),local("Helvetica Bold"),local("Helvetica-Bold");font-weight:600 900;size-adjust:68%}@font-face{font-family:BCR;src:local("Arial"),local("ArialMT"),local("Helvetica Neue"),local("HelveticaNeue"),local("Helvetica");font-weight:100 599;size-adjust:68%}@font-face{font-family:BCRA;src:local("Roboto Bold"),local("Roboto-Bold");font-weight:600 900;size-adjust:73%}@font-face{font-family:BCRA;src:local("Roboto"),local("Roboto-Regular");font-weight:100 599;size-adjust:73%}@font-face{font-family:BR;src:local("Segoe UI Bold"),local("SegoeUI-Bold"),local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Neue Bold"),local("HelveticaNeue-Bold");font-weight:600 900;size-adjust:91%}@font-face{font-family:BR;src:local("Segoe UI"),local("SegoeUI"),local("Arial"),local("ArialMT"),local("Helvetica Neue"),local("HelveticaNeue");font-weight:100 599;size-adjust:95%}@font-face{font-family:BRA;src:local("Roboto"),local("Roboto-Regular");size-adjust:99%}
 :root{--navy:#01062B;--royal:#044BAC;--cyan:#1EB0D0;--surface:#F3F6FA;--ink:#0B1633;--muted:#52607A;--line:#DCE3EE;--ok:#1C6B3E;--r:16px}
@@ -53,6 +105,10 @@ form.qf{flex:1 1 440px;background:#fff;color:var(--ink);border-radius:var(--r);p
 /* v1.122.0 (D-215): sugestão de cidades na cotação (rotas vendidas primeiro, depois o Brasil) e o link da privacidade visível no cartão branco dentro das faixas escuras */
 .qf label.qc{position:relative}.qcl{position:absolute;left:0;right:0;top:100%;z-index:30;margin:4px 0 0;padding:4px 0;list-style:none;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 8px 24px rgba(1,6,43,.18);max-height:min(240px,34vh);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;font-weight:400;font-size:16px}.qcl[hidden]{display:none}.qcl li{padding:12px 14px;min-height:44px;box-sizing:border-box;cursor:pointer;color:var(--ink);line-height:1.25}.qcl li.on,.qcl li:hover{background:#E8F6FA}.qf input[role=combobox]{scroll-margin-top:96px}form.qf input,form.qf select{font-size:16px}
 form.qf a.qf-priv{color:var(--royal);text-decoration:underline;font-weight:600}form.qf a.qf-priv:hover{color:var(--navy)}
+/* v1.140 (D-239): período da passagem, obrigatório (um ou mais), em botões grandes para o dedo */
+.qf fieldset.qf-per{border:0;margin:0;padding:0;min-width:0}.qf-per legend{font-weight:600;font-size:15px;padding:0;margin:0 0 6px}.qf-per-o{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.qf .qf-per-o label{flex-direction:row;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-weight:400;cursor:pointer;min-height:48px}.qf .qf-per-o input{width:20px;height:20px;flex:0 0 auto;margin:0;accent-color:var(--royal)}
+.qf-per-o span{display:flex;flex-direction:column;line-height:1.2}.qf-per-o small{color:var(--muted);font-size:12px}.qf-per-o label:has(input:checked){border-color:var(--royal);background:#EEF4FD}
 .buy{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 12px 32px rgba(1,6,43,.18);padding:24px;display:flex;flex-direction:column;gap:14px;color:var(--ink)}.buy h2{font-size:1.8rem;color:var(--navy)}
 .buy-band{background:linear-gradient(var(--navy) 0 50%,var(--surface) 50% 100%);padding:0 0 8px}.buy-ph{border:2px dashed var(--line);border-radius:12px;padding:28px;text-align:center;color:var(--muted)}.buy.bz{gap:10px}.bz .bz-lead{margin:0}.dark .buy h2.t{color:var(--navy)}.dark .buy .muted{color:var(--muted)}.dark .buy a{color:var(--royal)}
 @media (max-width:640px){.buy.bz{padding:18px 14px}.bz-wrap{width:auto;margin:0 -14px}} /* no celular a moldura usa a largura do cartão: com menos de ~320 px o widget vertical ganha rolagem lateral */
