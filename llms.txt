@@ -1,43 +1,66 @@
 # Descontobus
 
-> A Descontobus é uma agência de viagens do Rio de Janeiro e atende on-line clientes de todo o Brasil. Emitimos as passagens pelas plataformas contratadas, conforme os horários e as vagas das empresas de transporte.
+> A Descontobus é uma agência de viagens do Rio de Janeiro e atende on-line clientes de todo o Brasil. Emitimos as passagens pelas plataformas contratadas, conforme os horários e as vagas das empresas de transporte. CNPJ 63.144.303/0001-06. Cadastur 63.144.303/0001-06.
 
 Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cota (você recebe um link com os horários e os valores); você escolhe (horário, assento e os dados dos passageiros); você paga (pelo link ou por pix, na conta da empresa); você embarca (o cartão de embarque chega no mesmo link). A taxa de serviço aparece separada antes de pagar, e o pagamento é feito sempre na conta da empresa. O transporte é feito pela empresa indicada no bilhete.
 
 ## Serviços
-- [Passagens rodoviárias](https://descontobus.com.br/servicos/passagens-de-onibus/): Convencional, executivo, semileito e leito. A gente compara as opções do seu dia.
-- [Passagens aéreas](https://descontobus.com.br/servicos/passagens-aereas/): Voos nacionais com as regras de bagagem e remarcação explicadas antes de você pagar.
-- [Fretamento de ônibus e vans](https://descontobus.com.br/servicos/grupos-e-fretamento/): Igreja, escola, time ou empresa: ônibus e van fretados, sob consulta.
-- [Envio de encomendas pelo ônibus](https://descontobus.com.br/servicos/envio-de-encomendas/): Pacotes pela rede de encomendas das empresas de ônibus, sob consulta.
-- [Descontobus Corp](https://descontobus.com.br/servicos/viagens-para-empresas/): Viagens da equipe com fatura do mês por centro de custo.
-- [Seguro viagem](https://descontobus.com.br/servicos/seguro-viagem/): Cobertura para despesas médicas, bagagem e imprevistos durante a viagem.
-- [Pacote turístico](https://descontobus.com.br/servicos/pacote-turistico/): Passagem, hospedagem e passeios no mesmo pedido, com o valor fechado.
-- [Hospedagem](https://descontobus.com.br/servicos/hospedagem/): Hotel e pousada no destino, junto com a passagem.
-- [Aluguel de carros](https://descontobus.com.br/servicos/aluguel-de-carros/): Carro no destino para rodar a região, com as regras da locadora explicadas antes.
+- [Passagens rodoviárias](https://descontobus.com.br/servicos/passagens-de-onibus/): Você escolhe o horário e o assento e vê a taxa de serviço separada antes de pagar.
+- [Passagens aéreas](https://descontobus.com.br/servicos/passagens-aereas/): Antes de pagar, você vê o que a tarifa inclui e a regra para remarcar.
+- [Fretamento de ônibus e vans](https://descontobus.com.br/servicos/grupos-e-fretamento/): O fretamento é contratado pelo grupo, com empresa autorizada pela ANTT. A gente organiza e acompanha.
+- [Envio de encomendas pelo ônibus](https://descontobus.com.br/servicos/envio-de-encomendas/): O envio é feito pela transportadora, com preço, prazo e local de retirada informados antes.
+- [Descontobus Corp](https://descontobus.com.br/servicos/viagens-para-empresas/): Sem mensalidade: a empresa paga uma taxa por emissão, mostrada em cada pedido.
+- [Seguro viagem](https://descontobus.com.br/servicos/seguro-viagem/): Quer incluir seguro viagem? É opcional, e você vê as coberturas de cada plano antes de contratar.
+- [Pacote turístico](https://descontobus.com.br/servicos/pacote-turistico/): Passagem, hospedagem e passeios num pedido só, com o valor de cada parte por escrito.
+- [Hospedagem](https://descontobus.com.br/servicos/hospedagem/): Hotel ou pousada no destino da sua passagem, com a regra de cancelamento mostrada antes de reservar.
+- [Aluguel de carros](https://descontobus.com.br/servicos/aluguel-de-carros/): Carro no destino, com as regras da locadora explicadas antes de reservar.
 - [Produtos Digitais de Turismo & Viagens](https://descontobus.com.br/servicos/produtos-digitais/): Roteiros, guias e checklists de viagem em formato digital, para usar no celular.
 
 ## Páginas principais
 - [Destinos](https://descontobus.com.br/destinos/): Guias de cada cidade e rotas de ônibus e de avião.
 - [Empresas](https://descontobus.com.br/empresas/): Descontobus Corp: viagens da equipe sem mensalidade, com a fatura do mês.
 - [Parceiros](https://descontobus.com.br/empresas-parceiras/): Empresas de ônibus, companhias aéreas e parceiros com quem a gente trabalha.
+- [Todos os nossos trechos](https://descontobus.com.br/trechos/): Linhas de ônibus entre estados, com as empresas de cada trecho.
 - [Loja de viagem](https://descontobus.com.br/loja/): Produtos indicados para viajar melhor.
 - [Dúvidas frequentes](https://descontobus.com.br/duvidas/): Taxa, pagamento, bagagem, remarcação e documentos.
 - [Quem somos](https://descontobus.com.br/quem-somos/): A empresa e o jeito de trabalhar.
 - [Informações ao viajante](https://descontobus.com.br/informacoes-ao-viajante/): Documentos, bagagem, embarque, remarcação e ajuda em viagem.
+- [Blog](https://descontobus.com.br/blog/): Destinos e dicas de viagem.
 
 ## Rotas
 - [Rio de Janeiro para São Paulo de ônibus](https://descontobus.com.br/rio-sao-paulo/)
+- [São Paulo para Rio de Janeiro de ônibus](https://descontobus.com.br/sao-paulo-rio/)
+- [Rio de Janeiro para Búzios de ônibus](https://descontobus.com.br/rio-buzios/)
+- [Búzios para Rio de Janeiro de ônibus](https://descontobus.com.br/buzios-rio/)
+- [Rio de Janeiro para Bom Jesus do Norte de ônibus](https://descontobus.com.br/rio-bom-jesus-do-norte/)
+- [São Paulo para Salvador de ônibus](https://descontobus.com.br/sao-paulo-salvador/)
+- [São Paulo para Brasília de ônibus](https://descontobus.com.br/sao-paulo-brasilia/)
+- [Rio de Janeiro para Vitória de ônibus](https://descontobus.com.br/rio-vitoria/)
+- [Rio de Janeiro para Belo Horizonte de ônibus](https://descontobus.com.br/rio-belo-horizonte/)
+- [São Paulo para Curitiba de ônibus](https://descontobus.com.br/sao-paulo-curitiba/)
+
+## Guias de destino
+- [Belo Horizonte](https://descontobus.com.br/destinos/belo-horizonte/)
+- [Bom Jesus do Norte](https://descontobus.com.br/destinos/bom-jesus-do-norte/)
+- [Brasília](https://descontobus.com.br/destinos/brasilia/)
+- [Búzios](https://descontobus.com.br/destinos/buzios/)
+- [Curitiba](https://descontobus.com.br/destinos/curitiba/)
+- [Rio de Janeiro](https://descontobus.com.br/destinos/rio-de-janeiro/)
+- [Salvador](https://descontobus.com.br/destinos/salvador/)
+- [São Paulo](https://descontobus.com.br/destinos/sao-paulo/)
+- [Vitória](https://descontobus.com.br/destinos/vitoria/)
 
 ## Perguntas frequentes
 - A Descontobus é uma agência de verdade? Sim. Somos uma agência de viagens com CNPJ e cadastro no Cadastur, do Ministério do Turismo. Os dados da empresa ficam no rodapé de todas as páginas.
 - Quem faz a viagem? A empresa de ônibus ou a companhia aérea que aparece no bilhete. A gente pesquisa, emite e acompanha você até o embarque.
 - Quanto é a taxa de serviço? Depende da viagem. Ela aparece separada da tarifa, por escrito, antes de você pagar. Você só paga se concordar.
-- Como eu pago? Pelo link da cotação ou por Pix, sempre na conta da empresa. A gente nunca pede pagamento em conta de pessoa física.
+- Como eu pago? Na busca do site, você paga no ambiente da Buson, nossa parceira. Na cotação, paga pelo link ou por Pix, sempre na conta da empresa. A gente nunca pede pagamento em conta de pessoa física.
+- Por que aparece outro nome no Pix? No Pix, aparece o nome ALEXANDRE DE OLIVEIRA MAIA GOMES, que é a razão social da Descontobus (CNPJ 63.144.303/0001-06). É a conta da empresa.
 - Como recebo a passagem? O cartão de embarque chega no mesmo link da cotação. Na hora de embarcar, mostre no celular junto com um documento com foto.
 - Como sei que a passagem é válida? O bilhete é emitido no sistema da própria empresa de transporte e tem o localizador dela. Se quiser, você confere direto com a empresa.
 - Posso escolher o assento? No ônibus, sim. Você escolhe no mapa do ônibus, entre os lugares que estão livres na hora da compra.
-- Quanta bagagem posso levar no ônibus? Na viagem interestadual, até 30 kg no bagageiro e 5 kg de bagagem de mão, sem pagar a mais. Acima disso, a empresa pode cobrar o excesso.
 
 ## Contato
 - WhatsApp: (21) 98588-1025
+- E-mail: contato@descontobus.com.br
 - Site: https://descontobus.com.br/
