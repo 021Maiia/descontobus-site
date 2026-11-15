@@ -37,7 +37,7 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 - [São Paulo para Brasília de ônibus](https://descontobus.com.br/sao-paulo-brasilia/): a partir de R$ 249,99 + taxa de serviço (preço conferido em 15/11/2026)
 - [Rio de Janeiro para Vitória de ônibus](https://descontobus.com.br/rio-vitoria/): a partir de R$ 118,08 + taxa de serviço (preço conferido em 15/11/2026)
 - [Rio de Janeiro para Belo Horizonte de ônibus](https://descontobus.com.br/rio-belo-horizonte/): a partir de R$ 254,33 + taxa de serviço (preço conferido em 15/11/2026)
-- [São Paulo para Curitiba de ônibus](https://descontobus.com.br/sao-paulo-curitiba/): a partir de R$ 104,90 + taxa de serviço (preço conferido em 15/11/2026)
+- [São Paulo para Curitiba de ônibus](https://descontobus.com.br/sao-paulo-curitiba/): a partir de R$ 71,00 + taxa de serviço (preço conferido em 15/11/2026)
 
 ## Guias de destino
 - [Belo Horizonte](https://descontobus.com.br/destinos/belo-horizonte/)
