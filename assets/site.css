@@ -486,4 +486,4 @@ html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 @media only screen and (max-width:420px){.js-nav .mtog{width:44px;padding:0;justify-content:center}.js-nav .mtog span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 @media only screen and (max-width:360px){.js-nav .hd .wrap{gap:8px}.js-nav .hd .btn{padding:0 10px;font-size:14px;height:44px}.js-nav .hd .logo img{height:40px}} /* v1.64.0: logo, Comprar e menu numa linha até 320 px */
 @media (hover:none){.ofr:hover,.tile:hover,.why article:hover,.relcta:hover,.gcard:hover,.ptn span:hover{transform:none}.why article:hover .wimg img,.rcard:hover img{transform:none}}
-@media (max-width:760px){.tiles.main3{grid-template-columns:1fr}.tiles.main3 .tile span{display:block}}
+@media (max-width:760px){.tiles.main3{grid-template-columns:1fr}.tiles.main3 .tile span{display:block}.tiles.main3 .tile .ic{display:inline-flex}}
