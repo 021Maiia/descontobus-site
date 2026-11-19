@@ -29,15 +29,15 @@ Como funciona: você pede (origem, destino, data e quantas pessoas); a gente cot
 
 ## Rotas
 - [Rio de Janeiro para São Paulo de ônibus](https://descontobus.com.br/rio-sao-paulo/): a partir de R$ 109,00 + taxa de serviço (preço conferido em 18/11/2026)
-- [São Paulo para Rio de Janeiro de ônibus](https://descontobus.com.br/sao-paulo-rio/): a partir de R$ 108,00 + taxa de serviço (preço conferido em 18/11/2026)
+- [São Paulo para Rio de Janeiro de ônibus](https://descontobus.com.br/sao-paulo-rio/): a partir de R$ 108,99 + taxa de serviço (preço conferido em 18/11/2026)
 - [Rio de Janeiro para Búzios de ônibus](https://descontobus.com.br/rio-buzios/): a partir de R$ 91,77 + taxa de serviço (preço conferido em 18/11/2026)
 - [Búzios para Rio de Janeiro de ônibus](https://descontobus.com.br/buzios-rio/): a partir de R$ 82,19 + taxa de serviço (preço conferido em 18/11/2026)
 - [Rio de Janeiro para Bom Jesus do Norte de ônibus](https://descontobus.com.br/rio-bom-jesus-do-norte/): a partir de R$ 121,13 + taxa de serviço (preço conferido em 18/11/2026)
 - [São Paulo para Salvador de ônibus](https://descontobus.com.br/sao-paulo-salvador/): a partir de R$ 428,99 + taxa de serviço (preço conferido em 18/11/2026)
 - [São Paulo para Brasília de ônibus](https://descontobus.com.br/sao-paulo-brasilia/): a partir de R$ 249,99 + taxa de serviço (preço conferido em 18/11/2026)
-- [Rio de Janeiro para Vitória de ônibus](https://descontobus.com.br/rio-vitoria/): a partir de R$ 118,08 + taxa de serviço (preço conferido em 18/11/2026)
+- [Rio de Janeiro para Vitória de ônibus](https://descontobus.com.br/rio-vitoria/): a partir de R$ 134,89 + taxa de serviço (preço conferido em 18/11/2026)
 - [Rio de Janeiro para Belo Horizonte de ônibus](https://descontobus.com.br/rio-belo-horizonte/): a partir de R$ 103,90 + taxa de serviço (preço conferido em 18/11/2026)
-- [São Paulo para Curitiba de ônibus](https://descontobus.com.br/sao-paulo-curitiba/): a partir de R$ 82,99 + taxa de serviço (preço conferido em 18/11/2026)
+- [São Paulo para Curitiba de ônibus](https://descontobus.com.br/sao-paulo-curitiba/): a partir de R$ 80,99 + taxa de serviço (preço conferido em 18/11/2026)
 
 ## Guias de destino
 - [Belo Horizonte](https://descontobus.com.br/destinos/belo-horizonte/)

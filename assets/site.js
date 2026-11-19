@@ -28,7 +28,7 @@
   var gcv={};try{gcv=JSON.parse(document.body.getAttribute('data-gconv')||'{}')}catch(e){}
   var GEV={quote:'pedido_cotacao',wa:'clique_whatsapp',buy:'comprar_passagem'};
   // v1.60 (D-140) A11: o clique no WhatsApp separa o Descontão (assistente) do agente (uma pessoa), com a página e a origem
-  function gt(t,a){try{if(typeof window.gtag!=='function'||!GEV[t])return;var n=t==='wa'?(a==='bot'?'clique_whatsapp_descontao':'clique_whatsapp_agente'):GEV[t];window.gtag('event',n,{page_path:location.pathname,origem:src||'direto',transport_type:'beacon'});if(gcv[t])window.gtag('event','conversion',{send_to:gcv[t],transport_type:'beacon'})}catch(e){}}
+  function gt(t,a){try{if(window.dbxMp)window.dbxMp(t);if(typeof window.gtag!=='function'||!GEV[t])return;var n=t==='wa'?(a==='bot'?'clique_whatsapp_descontao':'clique_whatsapp_agente'):GEV[t];window.gtag('event',n,{page_path:location.pathname,origem:src||'direto',transport_type:'beacon'});if(gcv[t])window.gtag('event','conversion',{send_to:gcv[t],transport_type:'beacon'})}catch(e){}}
   function waKind(u){var m=/wa\.me\/55(\d+)/.exec(u),n=m?m[1]:'';if(n&&n===bot&&n!==wa)return 'bot';if(n&&n===wa&&n!==bot)return 'agent';var t='';try{t=decodeURIComponent((u.split('text=')[1]||'').replace(/\+/g,' '))}catch(e){}return /Descont[aã]o|comprar uma passagem pelo WhatsApp/i.test(t)?'bot':'agent'}
   function ping(t,a){gt(t,a);try{if(!api||!navigator.sendBeacon)return;var r='';try{var h=document.referrer?new URL(document.referrer).hostname:'';if(h&&h!==location.hostname)r=h}catch(e){}var v=src;navigator.sendBeacon(api+'/api/visita',new Blob([JSON.stringify({t:t,p:location.pathname,r:r,d:matchMedia('(max-width:768px)').matches?'m':'d',v:v,a:a||''})],{type:'text/plain'}))}catch(e){}}
   ping('pv');
