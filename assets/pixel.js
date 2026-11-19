@@ -1,0 +1,11 @@
+(function(){
+  var mpx=document.body.getAttribute('data-mpx')||'',MPK='dbx-pixel',MEV={quote:'Lead',wa:'Contact',buy:'InitiateCheckout'};
+  function mpGet(){try{return localStorage.getItem(MPK)||''}catch(e){return ''}}
+  function mpSet(v){try{if(v)localStorage.setItem(MPK,v);else localStorage.removeItem(MPK)}catch(e){}}
+  function mpLoad(){if(!mpx||window.fbq)return;!function(f,b,e,v,n,t,s){n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');window.fbq('set','autoConfig',false,mpx);window.fbq('init',mpx);window.fbq('track','PageView')}
+  function mpClear(){var h=location.hostname.replace(/^www[.]/,'');['_fbp','_fbc'].forEach(function(c){document.cookie=c+'=;Max-Age=0;path=/';document.cookie=c+'=;Max-Age=0;path=/;domain=.'+h})}
+  function mp(t){try{if(window.fbq&&MEV[t])window.fbq('track',MEV[t])}catch(e){}}
+  function mpAsk(){if(!mpx||document.querySelector('.ck'))return;var b=document.createElement('div');b.className='ck';b.setAttribute('role','dialog');b.setAttribute('aria-label','Escolha sobre cookies');b.innerHTML='<p>Podemos usar cookies da Meta para medir visitas e anúncios?<br><a href="/privacidade/">Saiba como funciona</a></p><div><button type="button" data-ck="nao">Recusar</button><button type="button" data-ck="sim">Aceitar</button></div>';b.addEventListener('click',function(ev){var v=ev.target.getAttribute&&ev.target.getAttribute('data-ck');if(!v)return;var antes=mpGet();mpSet(v);b.parentNode.removeChild(b);if(v==='sim')mpLoad();else{mpClear();if(window.fbq||antes==='sim')location.reload()}});document.body.appendChild(b)}
+  if(mpx){if(mpGet()==='sim')mpLoad();else if(!mpGet())mpAsk();Array.prototype.forEach.call(document.querySelectorAll('[data-cookie-pref]'),function(e){e.addEventListener('click',function(){mpAsk()})})}
+  window.dbxMp=mp;
+})();
