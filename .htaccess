@@ -7,6 +7,9 @@ Options -Indexes
   RewriteCond %{QUERY_STRING} !(^|&)(via|utm_source)=
   RewriteRule ^links(/(index\.html)?)?$ /?via=instagram [R=301,L,QSA]
   RewriteRule ^links(/(index\.html)?)?$ / [R=301,L]
+  # v1.174.0 (D-284): atalhos do CEO para os sistemas na rede privada (302: o destino pode mudar)
+  RewriteRule ^sistema(/(index\.html)?)?$ https://descontobus-os.tail06eeeb.ts.net/ [R=302,L]
+  RewriteRule ^mm(/(index\.html)?)?$ https://mm-money.tail06eeeb.ts.net/ [R=302,L]
 </IfModule>
 # v1.69.0 (D-151): trecho que virou página de rota leva para a rota, para quem chega pelo Google não cair na página de erro
 <IfModule mod_alias.c>
